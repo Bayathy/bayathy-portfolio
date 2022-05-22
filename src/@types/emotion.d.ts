@@ -10,4 +10,5 @@ interface Colors {
   primary: string
   secondary: string
   extra: string
+  text: string
 }
