@@ -10,4 +10,4 @@ parserOptions:
 
 rules:
   'import/export': off
-
+  'unicorn/prefer-export-from': off
