@@ -1,18 +1,10 @@
 import React, { useState } from 'react'
 import { ThemeProvider } from '@emotion/react'
 import { ThemeContext } from '../../../context/themecontext'
+import { darkTheme, lightTheme } from '../../../style/theme/Theme'
 
 type MainLayout = {
   children: React.ReactNode
-}
-const lightTheme = {
-  background: '#ffffff',
-  color: '#000000'
-}
-
-const darkTheme = {
-  background: '#222639',
-  color: '#f0f5fa'
 }
 
 const MainLayout: React.FC<MainLayout> = ({ children }) => {
