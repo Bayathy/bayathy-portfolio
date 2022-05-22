@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ThemeProvider } from '@emotion/react'
+import { css, ThemeProvider } from '@emotion/react'
 import { ThemeContext } from '../../../context/themecontext'
 import { darkTheme, lightTheme } from '../../../style/theme/Theme'
 
@@ -23,7 +23,13 @@ const MainLayout: React.FC<MainLayout> = ({ children }) => {
           setColorMode: ToggleTheme
         }}
       >
-        <div>{children}</div>
+        <div
+          css={css`
+            max-width: 760px;
+          `}
+        >
+          {children}
+        </div>
       </ThemeContext.Provider>
     </ThemeProvider>
   )
