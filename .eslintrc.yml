@@ -8,4 +8,6 @@ parser: '@typescript-eslint/parser'
 parserOptions:
   project: ./tsconfig.json
 
+rules:
+  'import/export': off
 

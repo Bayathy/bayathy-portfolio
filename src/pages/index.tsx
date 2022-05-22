@@ -1,17 +1,14 @@
 import type { NextPage } from 'next'
-import { css } from '@emotion/react'
+import ModeToggleButton from '../compornent/atom/ModeToggleButton/ModeToggleButton'
+import MainLayout from '../compornent/template/MainLayout/MainLayout'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <p
-        css={css`
-          color: #1ea7fd;
-        `}
-      >
-        aaa
-      </p>
-    </div>
+    <MainLayout>
+      <div>
+        <ModeToggleButton />
+      </div>
+    </MainLayout>
   )
 }
 
