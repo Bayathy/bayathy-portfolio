@@ -16,9 +16,14 @@ const MainLayout: React.FC = () => {
           body {
             background: ${theme.colors.primary};
             color: ${theme.colors.text};
-            margin: 0;
             line-height: 1.7;
             box-sizing: border-box;
+          }
+
+          * {
+            margin: 0;
+            padding: 0;
+          }
         `}
       />
       <Header />

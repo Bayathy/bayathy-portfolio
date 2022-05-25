@@ -1,6 +1,7 @@
 import React from 'react'
 import { css, useTheme } from '@emotion/react'
 import ModeToggleButton from '../../molecular/ModeToggleButton/ModeToggleButton'
+import ContentContainer from '../../atom/ContentContainer/ContentContainer'
 
 const Header: React.FC = () => {
   const theme = useTheme()
@@ -11,11 +12,16 @@ const Header: React.FC = () => {
         position: relative;
         width: 100vw;
         background: ${theme.colors.secondary};
-        height: 4rem;
+        height: 5rem;
         margin: 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
       `}
     >
-      <ModeToggleButton />
+      <ContentContainer>
+        <ModeToggleButton />
+      </ContentContainer>
     </div>
   )
 }
