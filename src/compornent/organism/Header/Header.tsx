@@ -11,7 +11,8 @@ const Header: React.FC = () => {
         position: relative;
         width: 100vw;
         background: ${theme.colors.secondary};
-        height: 15%;
+        height: 4rem;
+        margin: 0;
       `}
     >
       <ModeToggleButton />

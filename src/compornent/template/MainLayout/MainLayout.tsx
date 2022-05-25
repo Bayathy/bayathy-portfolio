@@ -8,14 +8,17 @@ const MainLayout: React.FC = () => {
   return (
     <div
       css={css`
-        max-width: 760px;
         margin: auto;
       `}
     >
       <Global
-        styles={css`body {
-          background: ${theme.colors.primary};
-          color: ${theme.colors.text};
+        styles={css`
+          body {
+            background: ${theme.colors.primary};
+            color: ${theme.colors.text};
+            margin: 0;
+            line-height: 1.7;
+            box-sizing: border-box;
         `}
       />
       <Header />

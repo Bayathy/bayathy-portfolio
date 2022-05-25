@@ -11,9 +11,8 @@ const StyledToggleButton: React.FC<StyledToggleButton> = ({ children }) => {
   return (
     <div
       css={css`
-        width: 3rem;
-        height: 3rem;
-        border: 3px solid ${theme.colors.primary};
+        width: 2rem;
+        border: 3px solid ${theme.colors.text};
         display: flex;
         align-content: center;
         justify-content: center;
