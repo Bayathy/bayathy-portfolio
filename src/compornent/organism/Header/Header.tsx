@@ -13,14 +13,26 @@ const Header: React.FC = () => {
         width: 100vw;
         background: ${theme.colors.secondary};
         height: 5rem;
-        margin: 0;
         display: flex;
-        justify-content: end;
         align-items: center;
+        justify-content: center;
       `}
     >
       <ContentContainer>
-        <ModeToggleButton />
+        <div
+          css={css`
+            display: flex;
+            justify-content: end;
+          `}
+        >
+          <div
+            css={css`
+              padding-right: 1rem;
+            `}
+          >
+            <ModeToggleButton />
+          </div>
+        </div>
       </ContentContainer>
     </div>
   )
