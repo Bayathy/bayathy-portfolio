@@ -16,7 +16,7 @@ const ThemeContextProvider: React.FC<ThemeContextProvider> = ({ children }) => {
   }
 
   return (
-    <ThemeProvider theme={themeMode === 'lightTheme' ? darkTheme : lightTheme}>
+    <ThemeProvider theme={themeMode === 'lightTheme' ? lightTheme : darkTheme}>
       <ThemeContext.Provider
         value={{
           colorMode: themeMode,
