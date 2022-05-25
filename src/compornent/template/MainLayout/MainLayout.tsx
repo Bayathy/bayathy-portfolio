@@ -1,11 +1,8 @@
 import React from 'react'
 import { css, Global, useTheme } from '@emotion/react'
+import Header from '../../organism/Header/Header'
 
-type MainLayout = {
-  children: React.ReactNode
-}
-
-const MainLayout: React.FC<MainLayout> = ({ children }) => {
+const MainLayout: React.FC = () => {
   const theme = useTheme()
 
   return (
@@ -21,7 +18,7 @@ const MainLayout: React.FC<MainLayout> = ({ children }) => {
           color: ${theme.colors.text};
         `}
       />
-      {children}
+      <Header />
     </div>
   )
 }
