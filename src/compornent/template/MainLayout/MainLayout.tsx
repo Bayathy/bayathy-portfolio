@@ -1,6 +1,7 @@
 import React from 'react'
 import { css, Global, useTheme } from '@emotion/react'
 import Header from '../../organism/Header/Header'
+import Myicon from '../../atom/MyIcon/Myicon'
 
 const MainLayout: React.FC = () => {
   const theme = useTheme()
@@ -27,6 +28,7 @@ const MainLayout: React.FC = () => {
         `}
       />
       <Header />
+      <Myicon />
     </div>
   )
 }
