@@ -12,7 +12,7 @@ const Header: React.FC = () => {
         position: relative;
         width: 100vw;
         background: ${theme.colors.secondary};
-        height: 5rem;
+        height: 3rem;
         display: flex;
         align-items: center;
         justify-content: center;

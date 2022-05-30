@@ -7,8 +7,8 @@ const Myicon: React.FC = () => {
   return (
     <div
       css={css`
-        height: 8rem;
-        width: 8rem;
+        height: 6rem;
+        width: 6rem;
         border-radius: 999px;
         position: relative;
       `}
