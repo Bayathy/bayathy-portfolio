@@ -11,6 +11,7 @@ const ContentContainer: React.FC<Content> = ({ children }) => {
       css={css`
         max-width: 760px;
         width: 100%;
+        margin: auto;
       `}
     >
       {children}
