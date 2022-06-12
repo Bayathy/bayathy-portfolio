@@ -8,8 +8,10 @@ const Space: React.FC<Space> = ({ space }) => {
   return (
     <div
       css={css`
-        margin: ${space};
+        margin: ${space}rem;
       `}
     />
   )
 }
+
+export default Space

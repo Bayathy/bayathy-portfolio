@@ -3,6 +3,7 @@ import { css, Global, useTheme } from '@emotion/react'
 import Header from '../../organism/Header/Header'
 import IconContents from '../../organism/IconContents/IconContents'
 import MenuTab from '../../molecular/MenuTab/MenuTab'
+import Space from '../../atom/Space/Space'
 
 const MainLayout: React.FC = () => {
   const theme = useTheme()
@@ -31,7 +32,9 @@ const MainLayout: React.FC = () => {
         `}
       />
       <Header />
+      <Space space={3} />
       <IconContents />
+      <Space space={4} />
       <MenuTab />
     </div>
   )
