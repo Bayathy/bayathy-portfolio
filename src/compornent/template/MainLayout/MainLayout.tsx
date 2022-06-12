@@ -2,6 +2,7 @@ import React from 'react'
 import { css, Global, useTheme } from '@emotion/react'
 import Header from '../../organism/Header/Header'
 import IconContents from '../../organism/IconContents/IconContents'
+import MenuTab from '../../molecular/MenuTab/MenuTab'
 
 const MainLayout: React.FC = () => {
   const theme = useTheme()
@@ -31,6 +32,7 @@ const MainLayout: React.FC = () => {
       />
       <Header />
       <IconContents />
+      <MenuTab />
     </div>
   )
 }
