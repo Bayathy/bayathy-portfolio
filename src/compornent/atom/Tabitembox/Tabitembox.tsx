@@ -4,7 +4,8 @@ import { css, useTheme } from '@emotion/react'
 type Tabitem = {
   name: string
   isSlect: boolean
-  onClick?: () => void
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  onClick?: Function
 }
 
 const Tabitembox: React.FC<Tabitem> = ({ name, isSlect, onClick }) => {

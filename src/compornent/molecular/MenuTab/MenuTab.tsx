@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Tabitembox from '../../atom/Tabitembox/Tabitembox'
 import { css, useTheme } from '@emotion/react'
 import ContentContainer from '../../atom/ContentContainer/ContentContainer'
 
 const MenuTab: React.FC = () => {
   const theme = useTheme()
+  const [isSelect, setSelect] = useState<boolean[]>([true, false, false])
 
-  const Testfunc = () => {
-    alert('ok')
+  const Togglemenu = (id: number) => {
+    setSelect(isSelect.map((item, i) => (i === id ? true : false)))
   }
+
   return (
     <ContentContainer>
       <div
@@ -22,9 +24,9 @@ const MenuTab: React.FC = () => {
           border-radius: 10px;
         `}
       >
-        <Tabitembox name={'About Me'} isSlect={true} onClick={Testfunc} />
-        <Tabitembox name={'Works'} isSlect={true} />
-        <Tabitembox name={'Blog'} isSlect={true} />
+        <Tabitembox name={'About Me'} isSlect={isSelect[0]} onClick={() => Togglemenu(0)} />
+        <Tabitembox name={'Works'} isSlect={isSelect[1]} onClick={() => Togglemenu(1)} />
+        <Tabitembox name={'Blog'} isSlect={isSelect[2]} onClick={() => Togglemenu(2)} />
       </div>
     </ContentContainer>
   )
