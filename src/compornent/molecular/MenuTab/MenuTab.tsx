@@ -14,7 +14,7 @@ const MenuTab: React.FC = () => {
           width: 80%;
           margin: auto;
           align-items: center;
-          justify-content: center;
+          justify-content: space-around;
           background: ${theme.colors.extra};
           border-radius: 10px;
         `}
