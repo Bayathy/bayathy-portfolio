@@ -4,9 +4,10 @@ import { css, useTheme } from '@emotion/react'
 type Tabitem = {
   name: string
   isSlect: boolean
+  onClick?: () => void
 }
 
-const Tabitembox: React.FC<Tabitem> = ({ name, isSlect }) => {
+const Tabitembox: React.FC<Tabitem> = ({ name, isSlect, onClick }) => {
   const theme = useTheme()
 
   const borderStyle =
@@ -28,6 +29,7 @@ const Tabitembox: React.FC<Tabitem> = ({ name, isSlect }) => {
         padding-bottom: 10px;
         ${borderStyle}
       `}
+      onClick={onClick}
     >
       <p>{name}</p>
     </div>

@@ -6,6 +6,9 @@ import ContentContainer from '../../atom/ContentContainer/ContentContainer'
 const MenuTab: React.FC = () => {
   const theme = useTheme()
 
+  const Testfunc = () => {
+    alert('ok')
+  }
   return (
     <ContentContainer>
       <div
@@ -19,9 +22,9 @@ const MenuTab: React.FC = () => {
           border-radius: 10px;
         `}
       >
-        <Tabitembox name={'About Me'} />
-        <Tabitembox name={'Works'} />
-        <Tabitembox name={'Blog'} />
+        <Tabitembox name={'About Me'} isSlect={true} onClick={Testfunc} />
+        <Tabitembox name={'Works'} isSlect={true} />
+        <Tabitembox name={'Blog'} isSlect={true} />
       </div>
     </ContentContainer>
   )
