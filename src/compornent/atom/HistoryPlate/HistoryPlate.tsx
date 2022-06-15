@@ -10,19 +10,44 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text }) => {
 
   return (
     <div
+      className="plate"
       css={css`
-        width: 60%;
-        border-radius: 10px;
-        background: ${theme.colors.extra};
+        display: flex;
+        align-items: center;
       `}
     >
-      <p
+      <div
         css={css`
-          padding: 1rem;
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          left: 2rem;
+          background-color: white;
+        `}
+      />
+      <div
+        css={css`
+          padding-left: 4rem;
+          width: 100%;
         `}
       >
-        {text}
-      </p>
+        <div
+          css={css`
+            width: 85%;
+            border-radius: 10px;
+            background: ${theme.colors.extra};
+          `}
+        >
+          <p
+            css={css`
+              padding: 1rem;
+            `}
+          >
+            {text}
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
