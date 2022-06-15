@@ -30,6 +30,8 @@ const Tabitembox: React.FC<Tabitem> = ({ name, isSlect, onClick }) => {
         padding-bottom: 10px;
         ${borderStyle}
       `}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       onClick={onClick}
     >
       <p>{name}</p>
