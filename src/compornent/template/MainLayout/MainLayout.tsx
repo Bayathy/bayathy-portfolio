@@ -4,6 +4,7 @@ import Header from '../../organism/Header/Header'
 import IconContents from '../../organism/IconContents/IconContents'
 import MenuTab from '../../molecular/MenuTab/MenuTab'
 import Space from '../../atom/Space/Space'
+import PageTitle from '../../atom/PageTitle/PageTitle.'
 
 const MainLayout: React.FC = () => {
   const theme = useTheme()
@@ -36,6 +37,8 @@ const MainLayout: React.FC = () => {
       <IconContents />
       <Space space={4} />
       <MenuTab />
+      <Space space={4} />
+      <PageTitle />
     </div>
   )
 }
