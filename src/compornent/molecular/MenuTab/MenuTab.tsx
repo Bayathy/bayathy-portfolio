@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Tabitembox from '../../atom/Tabitembox/Tabitembox'
 import { css, useTheme } from '@emotion/react'
 import ContentContainer from '../../atom/ContentContainer/ContentContainer'
@@ -6,7 +6,7 @@ import { usePageState } from '../../../context/PageContextProvider/pageContext'
 
 const MenuTab: React.FC = () => {
   const theme = useTheme()
-  const {page, setPage} = usePageState()
+  const { page, setPage } = usePageState()
 
   return (
     <ContentContainer>
