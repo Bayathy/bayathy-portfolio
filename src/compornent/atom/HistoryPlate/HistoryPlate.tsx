@@ -12,10 +12,17 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text }) => {
     <div
       css={css`
         width: 60%;
+        border-radius: 10px;
         background: ${theme.colors.extra};
       `}
     >
-      <p>{text}</p>
+      <p
+        css={css`
+          padding: 1rem;
+        `}
+      >
+        {text}
+      </p>
     </div>
   )
 }
