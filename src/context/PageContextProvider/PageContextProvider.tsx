@@ -13,7 +13,11 @@ const PageContextProvider: React.FC<PageContextProvider> = ({ children }) => {
     setPageState(PageState.map((item, i) => (i === id ? true : false)))
   }
 
-  return <PageContext.Provider value={{ page: PageState, setPage: Togglemenu }}>{children}</PageContext.Provider>
+  return (
+    <PageContext.Provider value={{ page: PageState, setPage: Togglemenu }}>
+      {children}
+    </PageContext.Provider>
+  )
 }
 
 export default PageContextProvider
