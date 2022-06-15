@@ -3,7 +3,7 @@ import { css, SerializedStyles } from '@emotion/react'
 
 type Content = {
   children: React.ReactNode
-  style: SerializedStyles
+  style?: SerializedStyles
 }
 
 const ContentContainer: React.FC<Content> = ({ children, style }) => {
