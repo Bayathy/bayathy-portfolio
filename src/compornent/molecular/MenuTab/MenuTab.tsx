@@ -2,14 +2,11 @@ import React, { useState } from 'react'
 import Tabitembox from '../../atom/Tabitembox/Tabitembox'
 import { css, useTheme } from '@emotion/react'
 import ContentContainer from '../../atom/ContentContainer/ContentContainer'
+import { usePageState } from '../../../context/PageContextProvider/pageContext'
 
 const MenuTab: React.FC = () => {
   const theme = useTheme()
-  const [isSelect, setSelect] = useState<boolean[]>([true, false, false])
-
-  const Togglemenu = (id: number) => {
-    setSelect(isSelect.map((item, i) => (i === id ? true : false)))
-  }
+  const {page, setPage} = usePageState()
 
   return (
     <ContentContainer>
@@ -24,9 +21,9 @@ const MenuTab: React.FC = () => {
           border-radius: 10px;
         `}
       >
-        <Tabitembox name={'About Me'} isSlect={isSelect[0]} onClick={() => Togglemenu(0)} />
-        <Tabitembox name={'Works'} isSlect={isSelect[1]} onClick={() => Togglemenu(1)} />
-        <Tabitembox name={'Blog'} isSlect={isSelect[2]} onClick={() => Togglemenu(2)} />
+        <Tabitembox name={'About Me'} isSlect={page[0]} onClick={() => setPage(0)} />
+        <Tabitembox name={'Works'} isSlect={page[1]} onClick={() => setPage(1)} />
+        <Tabitembox name={'Blog'} isSlect={page[2]} onClick={() => setPage(2)} />
       </div>
     </ContentContainer>
   )
