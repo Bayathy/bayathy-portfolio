@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ThemeProvider } from '@emotion/react'
-import { ThemeContext } from '../themecontext'
+import { ThemeContext } from './themecontext'
 import { darkTheme, lightTheme } from '../../style/theme/Theme'
 
 type ThemeContextProvider = {

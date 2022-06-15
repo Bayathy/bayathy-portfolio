@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react'
 
-interface ThemeContextType {
+type ThemeContextType ={
   colorMode: 'lightTheme' | 'darkTheme'
   setColorMode: () => void
 }

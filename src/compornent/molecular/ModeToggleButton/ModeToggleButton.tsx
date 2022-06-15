@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from '@iconify/react'
-import { useTheme as useThemeMode } from '../../../context/themecontext'
+import { useTheme as useThemeMode } from '../../../context/ThemeContextProvider/themecontext'
 import StyledToggleButton from '../../atom/StyledToggleButton/StyledToggleButton'
 import { useTheme } from '@emotion/react'
 
