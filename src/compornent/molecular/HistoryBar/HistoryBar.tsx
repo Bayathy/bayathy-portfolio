@@ -1,6 +1,6 @@
+import { css } from '@emotion/react'
 import React from 'react'
 import ContentContainer from '../../atom/ContentContainer/ContentContainer'
-import { css } from '@emotion/react'
 import HistoryPlate from '../../atom/HistoryPlate/HistoryPlate'
 
 const HistoryBar: React.FC = () => {
@@ -8,11 +8,13 @@ const HistoryBar: React.FC = () => {
     <ContentContainer
       style={css`
         position: relative;
+        margin: auto;
+        width: 80%;
       `}
     >
       <div
         css={css`
-          :before {
+          .plate:before {
             content: '';
             position: absolute;
             left: 2.4rem;
@@ -20,7 +22,6 @@ const HistoryBar: React.FC = () => {
             bottom: 0;
             width: 0.2rem;
             background: black;
-            z-index: 10;
           }
 
           .plate:last-child:before {
@@ -31,7 +32,6 @@ const HistoryBar: React.FC = () => {
             bottom: 0;
             width: 0.2rem;
             background: white;
-            z-index: 10;
           }
         `}
       >

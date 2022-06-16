@@ -1,5 +1,5 @@
-import React from 'react'
 import { css, useTheme } from '@emotion/react'
+import React from 'react'
 
 type HistoryPlate = {
   text: string
