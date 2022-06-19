@@ -5,12 +5,14 @@ import HistoryPlate from '../../atom/HistoryPlate/HistoryPlate'
 
 const HistoryBar: React.FC = () => {
   const theme = useTheme()
+
+  const textlist: string[] = ['a', 'b', 'c']
   return (
     <ContentContainer
       style={css`
         position: relative;
         margin: auto;
-        width: 80%;
+        width: 90%;
       `}
     >
       <div
@@ -18,7 +20,10 @@ const HistoryBar: React.FC = () => {
           .plate::before {
             content: '';
             position: absolute;
-            left: 2.4rem;
+            left: 1.4rem;
+            @media (min-width: 420px) {
+              left: 2.4rem;
+            }
             top: 1.8rem;
             bottom: 0;
             width: 0.2rem;
@@ -28,19 +33,26 @@ const HistoryBar: React.FC = () => {
 
           .plate:last-child:before {
             content: '';
-            position: absolute;
-            left: 2.4rem;
-            top: 1.8rem;
-            bottom: 0;
-            width: 0.2rem;
             background: ${theme.colors.primary};
           }
         `}
       >
-        <HistoryPlate text={'test'} />
-        <HistoryPlate text={'test'} />
-        <HistoryPlate text={'test'} />
-        <HistoryPlate text={'test'} />
+        {textlist.map((index, key) => (
+          <div
+            className={'plate'}
+            css={css`
+              position: relative;
+            `}
+            key={key}
+          >
+            <HistoryPlate text={index} key={key} />
+            <div
+              css={css`
+                padding-bottom: 3rem;
+              `}
+            />
+          </div>
+        ))}
       </div>
     </ContentContainer>
   )

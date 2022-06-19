@@ -11,7 +11,7 @@ const PageTitle: React.FC = () => {
     <ContentContainer>
       <div
         css={css`
-          width: 90%;
+          width: 95%;
           border-bottom: 2px solid white;
           margin: auto;
         `}

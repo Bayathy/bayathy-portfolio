@@ -10,7 +10,6 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text }) => {
 
   return (
     <div
-      className={'plate'}
       css={css`
         display: flex;
         align-items: center;
@@ -23,19 +22,25 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text }) => {
           width: 1rem;
           height: 1rem;
           border-radius: 50%;
-          left: 2rem;
+          left: 1rem;
+          @media (min-width: 420px) {
+            left: 2rem;
+          }
           background-color: white;
         `}
       />
       <div
         css={css`
-          padding-left: 4rem;
+          padding-left: 2.5rem;
+          @media (min-width: 420px) {
+            padding-left: 4rem;
+          }
           width: 100%;
         `}
       >
         <div
           css={css`
-            width: 85%;
+            width: 90%;
             border-radius: 10px;
             background: ${theme.colors.extra};
           `}
