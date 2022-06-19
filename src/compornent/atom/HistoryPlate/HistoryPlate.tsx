@@ -10,10 +10,11 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text }) => {
 
   return (
     <div
-      className="plate"
+      className={'plate'}
       css={css`
         display: flex;
         align-items: center;
+        position: relative;
       `}
     >
       <div
