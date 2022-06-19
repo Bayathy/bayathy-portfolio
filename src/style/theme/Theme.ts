@@ -1,10 +1,23 @@
+const paddingTheme = {
+  small: '1rem',
+  medium: '2rem',
+  large: '4rem'
+}
+
+const marginTheme = {
+  small: '1rem',
+  medium: '2rem',
+  large: '4rem'
+}
 export const lightTheme = {
   colors: {
     primary: '#ffece6',
     secondary: '#cccccc',
     extra: '#6f6f6f',
     text: '#000000'
-  }
+  },
+  padding: paddingTheme,
+  margin: marginTheme
 }
 
 export const darkTheme = {
@@ -13,5 +26,7 @@ export const darkTheme = {
     secondary: '#1d1d1d',
     extra: '#6f6f6f',
     text: '#ffffff'
-  }
+  },
+  padding: paddingTheme,
+  margin: marginTheme
 }

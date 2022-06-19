@@ -48,7 +48,7 @@ const HistoryBar: React.FC = () => {
             <HistoryPlate text={index} key={key} />
             <div
               css={css`
-                padding-bottom: 3rem;
+                padding-bottom: ${theme.padding.medium};
               `}
             />
           </div>
