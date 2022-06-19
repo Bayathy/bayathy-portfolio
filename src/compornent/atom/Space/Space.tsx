@@ -3,14 +3,28 @@ import { css } from '@emotion/react'
 
 type Space = {
   space: number
+  margin: boolean
+  padding?: boolean
 }
-const Space: React.FC<Space> = ({ space }) => {
+
+const Space: React.FC<Space> = ({ space, margin, padding }) => {
   return (
-    <div
-      css={css`
-        margin: ${space}rem;
-      `}
-    />
+    <>
+      {margin && (
+        <div
+          css={css`
+            margin: ${space}rem;
+          `}
+        />
+      )}
+      {padding && (
+        <div
+          css={css`
+            padding: ${space}rem;
+          `}
+        />
+      )}
+    </>
   )
 }
 

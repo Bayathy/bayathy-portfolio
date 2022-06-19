@@ -34,13 +34,13 @@ const MainLayout: React.FC = () => {
         `}
       />
       <Header />
-      <Space space={3} />
+      <Space space={3} margin />
       <IconContents />
-      <Space space={4} />
+      <Space space={4} margin />
       <MenuTab />
-      <Space space={4} />
+      <Space space={4} margin />
       <PageTitle />
-      <Space space={4} />
+      <Space space={4} margin />
       <HistoryBar />
     </div>
   )
