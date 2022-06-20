@@ -3,9 +3,10 @@ import React from 'react'
 
 type HistoryPlate = {
   text: string
+  date: string
 }
 
-const HistoryPlate: React.FC<HistoryPlate> = ({ text }) => {
+const HistoryPlate: React.FC<HistoryPlate> = ({ text, date }) => {
   const theme = useTheme()
 
   return (
@@ -19,8 +20,8 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text }) => {
       <div
         css={css`
           position: absolute;
-          width: 1rem;
-          height: 1rem;
+          width: 0.8rem;
+          height: 0.8rem;
           border-radius: 50%;
           left: 1rem;
           @media (min-width: 420px) {
@@ -43,11 +44,16 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text }) => {
             width: 90%;
             border-radius: 10px;
             background: ${theme.colors.extra};
+            line-height: 1;
+            display: flex;
+            align-items: baseline;
+            padding: 1rem;
           `}
         >
+          <p>{date}</p>
           <p
             css={css`
-              padding: 1rem;
+              padding-left: 2rem;
             `}
           >
             {text}
