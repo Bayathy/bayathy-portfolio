@@ -5,6 +5,7 @@ import IconContents from '../../organism/IconContents/IconContents'
 import MenuTab from '../../molecular/MenuTab/MenuTab'
 import Space from '../../atom/Space/Space'
 import PageTitle from '../../atom/PageTitle/PageTitle.'
+import SkillsCard from '../../molecular/SkillsCard/SkillsCard'
 import HistoryBar from '../../molecular/HistoryBar/HistoryBar'
 
 const MainLayout: React.FC = () => {
@@ -34,7 +35,7 @@ const MainLayout: React.FC = () => {
         `}
       />
       <Header />
-      <Space space={3} margin />
+      <Space space={6} margin />
       <IconContents />
       <Space space={4} margin />
       <MenuTab />
@@ -42,6 +43,8 @@ const MainLayout: React.FC = () => {
       <PageTitle />
       <Space space={4} margin />
       <HistoryBar />
+      <Space space={2} margin />
+      <SkillsCard />
     </div>
   )
 }

@@ -12,7 +12,8 @@ const Card: React.FC<Card> = ({ children, style }) => {
   return (
     <div
       css={css`
-        background: ${theme.colors.secondary};
+        background: ${theme.colors.extra};
+        border-radius: 10px;
         ${style}
       `}
     >

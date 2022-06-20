@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Image from 'next/image'
-import Imagesrc from './Icon.jpg'
+import Imagesrc from './Icon2.jpg'
 
 const Myicon: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Myicon: React.FC = () => {
         position: relative;
       `}
     >
-      <Image src={Imagesrc} layout={'fill'} style={{ borderRadius: 999 }} />
+      <Image src={Imagesrc} layout={'fill'} style={{ borderRadius: 999, zIndex: 1 }} />
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 
 type Space = {
   space: number
-  margin: boolean
+  margin?: boolean
   padding?: boolean
 }
 
@@ -13,14 +13,14 @@ const Space: React.FC<Space> = ({ space, margin, padding }) => {
       {margin && (
         <div
           css={css`
-            margin: ${space}rem;
+            margin-bottom: ${space}rem;
           `}
         />
       )}
       {padding && (
         <div
           css={css`
-            padding: ${space}rem;
+            padding-bottom: ${space}rem;
           `}
         />
       )}

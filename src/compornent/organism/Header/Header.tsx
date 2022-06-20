@@ -9,13 +9,15 @@ const Header: React.FC = () => {
   return (
     <div
       css={css`
-        position: relative;
+        position: fixed;
+        top: 0;
         width: 100vw;
         background: ${theme.colors.secondary};
         height: 3.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 999;
       `}
     >
       <ContentContainer>
@@ -27,7 +29,7 @@ const Header: React.FC = () => {
         >
           <div
             css={css`
-              padding-right: 1rem;
+              padding-right: 2rem;
             `}
           >
             <ModeToggleButton />
