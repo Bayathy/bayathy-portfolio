@@ -6,9 +6,13 @@ import MenuTab from '../../molecular/MenuTab/MenuTab'
 import Space from '../../atom/Space/Space'
 import PageTitle from '../../atom/PageTitle/PageTitle.'
 import Footer from '../../organism/Footer/Footer'
+import About from '../../organism/About/About'
+import { usePageState } from '../../../context/PageContextProvider/pageContext'
 
 const MainLayout: React.FC = () => {
   const theme = useTheme()
+
+  const { page } = usePageState()
 
   return (
     <div
@@ -41,6 +45,8 @@ const MainLayout: React.FC = () => {
       <MenuTab />
       <Space space={4} margin />
       <PageTitle />
+      <Space space={4} margin />
+      {page[0] && <About />}
       <Space space={4} margin />
       <Footer />
     </div>
