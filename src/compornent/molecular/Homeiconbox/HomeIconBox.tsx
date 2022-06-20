@@ -5,42 +5,36 @@ import { css } from '@emotion/react'
 
 const HomeIconBox: React.FC = () => {
   return (
-    <div
-      css={css`
-        width: 100vw;
-      `}
-    >
-      <ContentContainer>
+    <ContentContainer>
+      <div
+        css={css`
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15%;
+          max-width: 90%;
+          margin: auto;
+        `}
+      >
+        <div>
+          <Myicon />
+        </div>
         <div
           css={css`
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15%;
-            max-width: 90%;
-            margin: auto;
+            max-width: 35%;
           `}
         >
-          <div>
-            <Myicon />
-          </div>
-          <div
+          <p
             css={css`
-              max-width: 35%;
+              font-size: 2rem;
+              font-weight: bold;
             `}
           >
-            <p
-              css={css`
-                font-size: 2rem;
-                font-weight: bold;
-              `}
-            >
-              Bayathy
-            </p>
-          </div>
+            Bayathy
+          </p>
         </div>
-      </ContentContainer>
-    </div>
+      </div>
+    </ContentContainer>
   )
 }
 
