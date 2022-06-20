@@ -11,6 +11,10 @@ const HomeIconBox: React.FC = () => {
           display: flex;
           align-items: center;
           justify-content: center;
+          flex-direction: column;
+          @media (min-width: 480px) {
+            flex-direction: row;
+          }
           gap: 15%;
           max-width: 90%;
           margin: auto;

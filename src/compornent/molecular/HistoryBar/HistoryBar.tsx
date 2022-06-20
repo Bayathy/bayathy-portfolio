@@ -6,12 +6,10 @@ import HistoryPlate from '../../atom/HistoryPlate/HistoryPlate'
 const HistoryBar: React.FC = () => {
   const theme = useTheme()
 
-  const textlist: string[] = ['a', 'b', 'c']
+  const textlist: string[] = ['a', 'b', 'c', 'd', 'c', 'f']
   return (
     <ContentContainer
       style={css`
-        position: relative;
-        margin: auto;
         width: 90%;
       `}
     >
@@ -44,6 +42,7 @@ const HistoryBar: React.FC = () => {
             <div
               css={css`
                 padding-bottom: ${theme.padding.medium};
+                width: 1%;
               `}
             />
           </div>
