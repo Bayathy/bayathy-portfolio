@@ -3,7 +3,7 @@ import { css, SerializedStyles, useTheme } from '@emotion/react'
 
 type Card = {
   children: React.ReactNode
-  style: SerializedStyles
+  style?: SerializedStyles
 }
 
 const Card: React.FC<Card> = ({ children, style }) => {
