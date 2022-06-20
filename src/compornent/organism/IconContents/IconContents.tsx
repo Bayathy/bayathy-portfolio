@@ -1,12 +1,10 @@
 import React from 'react'
-import HomeIconBox from '../../molecular/Homeiconbox/HomeIconBox'
+import { HomeIconBox } from '../../molecular'
 
-const IconContents: React.FC = () => {
+export const IconContents: React.FC = () => {
   return (
     <div>
       <HomeIconBox />
     </div>
   )
 }
-
-export default IconContents

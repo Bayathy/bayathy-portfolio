@@ -1,10 +1,9 @@
 import React from 'react'
-import Tabitembox from '../../atom/Tabitembox/Tabitembox'
+import { ContentContainer, Tabitembox } from '../../atom'
 import { css, useTheme } from '@emotion/react'
-import ContentContainer from '../../atom/ContentContainer/ContentContainer'
 import { usePageState } from '../../../context/PageContextProvider/pageContext'
 
-const MenuTab: React.FC = () => {
+export const MenuTab: React.FC = () => {
   const theme = useTheme()
   const { page, setPage } = usePageState()
 
@@ -28,5 +27,3 @@ const MenuTab: React.FC = () => {
     </ContentContainer>
   )
 }
-
-export default MenuTab

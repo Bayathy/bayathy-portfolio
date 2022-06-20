@@ -1,7 +1,7 @@
 import React from 'react'
 import { css, useTheme } from '@emotion/react'
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   const theme = useTheme()
   return (
     <div
@@ -17,5 +17,3 @@ const Footer: React.FC = () => {
     </div>
   )
 }
-
-export default Footer

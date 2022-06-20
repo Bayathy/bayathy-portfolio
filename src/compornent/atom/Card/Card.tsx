@@ -6,7 +6,7 @@ type Card = {
   style?: SerializedStyles
 }
 
-const Card: React.FC<Card> = ({ children, style }) => {
+export const Card: React.FC<Card> = ({ children, style }) => {
   const theme = useTheme()
 
   return (
@@ -21,5 +21,3 @@ const Card: React.FC<Card> = ({ children, style }) => {
     </div>
   )
 }
-
-export default Card

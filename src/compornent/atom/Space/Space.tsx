@@ -7,7 +7,7 @@ type Space = {
   padding?: boolean
 }
 
-const Space: React.FC<Space> = ({ space, margin, padding }) => {
+export const Space: React.FC<Space> = ({ space, margin, padding }) => {
   return (
     <>
       {margin && (
@@ -27,5 +27,3 @@ const Space: React.FC<Space> = ({ space, margin, padding }) => {
     </>
   )
 }
-
-export default Space

@@ -1,13 +1,9 @@
 import React from 'react'
 import { css, Global, useTheme } from '@emotion/react'
-import Header from '../../organism/Header/Header'
-import IconContents from '../../organism/IconContents/IconContents'
-import MenuTab from '../../molecular/MenuTab/MenuTab'
-import Space from '../../atom/Space/Space'
-import PageTitle from '../../atom/PageTitle/PageTitle.'
-import Footer from '../../organism/Footer/Footer'
-import About from '../../organism/About/About'
 import { usePageState } from '../../../context/PageContextProvider/pageContext'
+import { PageTitle, Space } from '../../atom'
+import { MenuTab } from '../../molecular'
+import { About, Footer, Header, IconContents } from '../../organism'
 
 const MainLayout: React.FC = () => {
   const theme = useTheme()
@@ -35,6 +31,10 @@ const MainLayout: React.FC = () => {
             font-family: Bahnschrift, 'Yu Gothic', '游ゴシック', YuGothic, '游ゴシック体',
               sans-serif;
             user-select: none;
+          }
+
+          ::-webkit-scrollbar {
+            width: 0px;
           }
         `}
       />

@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import Image from 'next/image'
 import Imagesrc from './Icon2.jpg'
 
-const Myicon: React.FC = () => {
+export const Myicon: React.FC = () => {
   return (
     <div
       css={css`
@@ -17,5 +17,3 @@ const Myicon: React.FC = () => {
     </div>
   )
 }
-
-export default Myicon

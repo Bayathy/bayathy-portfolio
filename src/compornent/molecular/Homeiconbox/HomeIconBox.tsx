@@ -1,9 +1,8 @@
 import React from 'react'
-import ContentContainer from '../../atom/ContentContainer/ContentContainer'
-import Myicon from '../../atom/MyIcon/Myicon'
 import { css } from '@emotion/react'
+import { ContentContainer, Myicon } from '../../atom'
 
-const HomeIconBox: React.FC = () => {
+export const HomeIconBox: React.FC = () => {
   return (
     <ContentContainer>
       <div
@@ -41,5 +40,3 @@ const HomeIconBox: React.FC = () => {
     </ContentContainer>
   )
 }
-
-export default HomeIconBox

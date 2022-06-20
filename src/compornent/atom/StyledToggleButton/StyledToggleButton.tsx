@@ -5,7 +5,7 @@ type StyledToggleButton = {
   children: React.ReactNode
 }
 
-const StyledToggleButton: React.FC<StyledToggleButton> = ({ children }) => {
+export const StyledToggleButton: React.FC<StyledToggleButton> = ({ children }) => {
   const theme = useTheme()
 
   return (
@@ -24,5 +24,3 @@ const StyledToggleButton: React.FC<StyledToggleButton> = ({ children }) => {
     </div>
   )
 }
-
-export default StyledToggleButton

@@ -1,14 +1,13 @@
 import { css, useTheme } from '@emotion/react'
 import React from 'react'
-import ContentContainer from '../../atom/ContentContainer/ContentContainer'
-import HistoryPlate from '../../atom/HistoryPlate/HistoryPlate'
+import { ContentContainer, HistoryPlate } from '../../atom'
 
 type History = {
   date: string
   text: string
 }
 
-const HistoryBar: React.FC = () => {
+export const HistoryBar: React.FC = () => {
   const theme = useTheme()
 
   const datelist: History[] = [
@@ -65,5 +64,3 @@ const HistoryBar: React.FC = () => {
     </ContentContainer>
   )
 }
-
-export default HistoryBar

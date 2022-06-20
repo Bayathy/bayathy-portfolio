@@ -1,9 +1,9 @@
 import React from 'react'
-import Card from '../../atom/Card/Card'
-import ContentContainer from '../../atom/ContentContainer/ContentContainer'
-import { css, useTheme } from '@emotion/react'
 
-const SkillsCard: React.FC = () => {
+import { css, useTheme } from '@emotion/react'
+import { Card, ContentContainer } from '../../atom'
+
+export const SkillsCard: React.FC = () => {
   const theme = useTheme()
   return (
     <ContentContainer>
@@ -26,5 +26,3 @@ const SkillsCard: React.FC = () => {
     </ContentContainer>
   )
 }
-
-export default SkillsCard

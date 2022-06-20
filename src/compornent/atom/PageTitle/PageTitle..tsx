@@ -1,9 +1,9 @@
 import { css, useTheme } from '@emotion/react'
 import React from 'react'
 import { usePageState } from '../../../context/PageContextProvider/pageContext'
-import ContentContainer from '../ContentContainer/ContentContainer'
+import { ContentContainer } from '../ContentContainer'
 
-const PageTitle: React.FC = () => {
+export const PageTitle: React.FC = () => {
   const { page } = usePageState()
   const theme = useTheme()
   const title = page[0] ? 'About Me' : page[1] ? 'Works' : 'Blog'
@@ -28,5 +28,3 @@ const PageTitle: React.FC = () => {
     </ContentContainer>
   )
 }
-
-export default PageTitle

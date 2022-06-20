@@ -1,9 +1,8 @@
 import React from 'react'
-import Space from '../../atom/Space/Space'
-import HistoryBar from '../../molecular/HistoryBar/HistoryBar'
-import SkillsCard from '../../molecular/SkillsCard/SkillsCard'
+import { Space } from '../../atom'
+import { HistoryBar, SkillsCard } from '../../molecular'
 
-const About: React.FC = () => {
+export const About: React.FC = () => {
   return (
     <>
       <Space space={4} margin />
@@ -13,5 +12,3 @@ const About: React.FC = () => {
     </>
   )
 }
-
-export default About

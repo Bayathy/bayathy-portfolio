@@ -39,4 +39,4 @@ const Tabitembox: React.FC<Tabitem> = ({ name, isSlect, onClick }) => {
   )
 }
 
-export default Tabitembox
+export { Tabitembox }

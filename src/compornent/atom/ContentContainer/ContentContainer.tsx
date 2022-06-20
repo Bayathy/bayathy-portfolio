@@ -6,7 +6,7 @@ type Content = {
   style?: SerializedStyles
 }
 
-const ContentContainer: React.FC<Content> = ({ children, style }) => {
+export const ContentContainer: React.FC<Content> = ({ children, style }) => {
   return (
     <div
       css={css`
@@ -20,5 +20,3 @@ const ContentContainer: React.FC<Content> = ({ children, style }) => {
     </div>
   )
 }
-
-export default ContentContainer

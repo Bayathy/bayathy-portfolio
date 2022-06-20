@@ -1,9 +1,9 @@
 import React from 'react'
 import { css, useTheme } from '@emotion/react'
-import ModeToggleButton from '../../molecular/ModeToggleButton/ModeToggleButton'
-import ContentContainer from '../../atom/ContentContainer/ContentContainer'
+import { ModeToggleButton } from '../../molecular'
+import { ContentContainer } from '../../atom'
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const theme = useTheme()
 
   return (
@@ -39,5 +39,3 @@ const Header: React.FC = () => {
     </div>
   )
 }
-
-export default Header

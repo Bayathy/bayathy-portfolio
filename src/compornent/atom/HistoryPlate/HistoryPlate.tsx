@@ -6,7 +6,7 @@ type HistoryPlate = {
   date: string
 }
 
-const HistoryPlate: React.FC<HistoryPlate> = ({ text, date }) => {
+export const HistoryPlate: React.FC<HistoryPlate> = ({ text, date }) => {
   const theme = useTheme()
 
   return (
@@ -63,5 +63,3 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text, date }) => {
     </div>
   )
 }
-
-export default HistoryPlate
