@@ -19,7 +19,7 @@ const SkillsCard: React.FC = () => {
           `}
         >
           <div>
-            <p>test</p>
+            <p>あいうえお</p>
           </div>
         </div>
       </Card>

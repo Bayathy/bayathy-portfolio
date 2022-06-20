@@ -47,7 +47,7 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text, date }) => {
             line-height: 1;
             display: flex;
             align-items: baseline;
-            padding: 1rem;
+            padding: ${theme.padding.small};
           `}
         >
           <p>{date}</p>
