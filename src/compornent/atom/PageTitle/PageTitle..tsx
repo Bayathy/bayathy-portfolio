@@ -5,7 +5,7 @@ import ContentContainer from '../ContentContainer/ContentContainer'
 
 const PageTitle: React.FC = () => {
   const { page } = usePageState()
-  const title = page[0] ? 'About' : page[1] ? 'Works' : 'Blog'
+  const title = page[0] ? 'About Me' : page[1] ? 'Works' : 'Blog'
 
   return (
     <ContentContainer>

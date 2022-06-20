@@ -35,7 +35,7 @@ const MainLayout: React.FC = () => {
         `}
       />
       <Header />
-      <Space space={6} margin />
+      <Space space={7.5} margin />
       <IconContents />
       <Space space={4} margin />
       <MenuTab />
