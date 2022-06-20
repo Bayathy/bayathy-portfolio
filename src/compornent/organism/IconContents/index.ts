@@ -1,1 +1,1 @@
-export * from './IconContents'
+export * from './TopContents'

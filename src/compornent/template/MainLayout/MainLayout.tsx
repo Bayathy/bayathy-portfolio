@@ -1,9 +1,8 @@
 import React from 'react'
 import { css, Global, useTheme } from '@emotion/react'
 import { usePageState } from '../../../context/PageContextProvider/pageContext'
-import { PageTitle, Space } from '../../atom'
-import { MenuTab } from '../../molecular'
-import { About, Footer, Header, IconContents } from '../../organism'
+import { Space } from '../../atom'
+import { About, Footer, Header, TopContents } from '../../organism'
 
 const MainLayout: React.FC = () => {
   const theme = useTheme()
@@ -40,11 +39,7 @@ const MainLayout: React.FC = () => {
       />
       <Header />
       <Space space={7.5} margin />
-      <IconContents />
-      <Space space={4} margin />
-      <MenuTab />
-      <Space space={4} margin />
-      <PageTitle />
+      <TopContents />
       <Space space={4} margin />
       {page[0] && <About />}
       <Space space={4} margin />
