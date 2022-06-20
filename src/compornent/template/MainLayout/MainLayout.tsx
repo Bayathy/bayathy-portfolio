@@ -7,6 +7,7 @@ import Space from '../../atom/Space/Space'
 import PageTitle from '../../atom/PageTitle/PageTitle.'
 import SkillsCard from '../../molecular/SkillsCard/SkillsCard'
 import HistoryBar from '../../molecular/HistoryBar/HistoryBar'
+import Footer from '../../organism/Footer/Footer'
 
 const MainLayout: React.FC = () => {
   const theme = useTheme()
@@ -29,7 +30,8 @@ const MainLayout: React.FC = () => {
           * {
             margin: 0;
             padding: 0;
-            font-family: 'Noto Sans JP', sans-serif;
+            font-family: Bahnschrift, 'Yu Gothic', '游ゴシック', YuGothic, '游ゴシック体',
+              sans-serif;
             user-select: none;
           }
         `}
@@ -45,6 +47,8 @@ const MainLayout: React.FC = () => {
       <HistoryBar />
       <Space space={2} margin />
       <SkillsCard />
+      <Space space={4} margin />
+      <Footer />
     </div>
   )
 }

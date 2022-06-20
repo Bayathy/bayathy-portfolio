@@ -13,7 +13,7 @@ export const lightTheme = {
   colors: {
     primary: '#ffece6',
     secondary: '#cccccc',
-    extra: '#6f6f6f',
+    extra: '#ffffff',
     text: '#000000'
   },
   padding: paddingTheme,

@@ -26,7 +26,7 @@ const HistoryPlate: React.FC<HistoryPlate> = ({ text }) => {
           @media (min-width: 420px) {
             left: 2rem;
           }
-          background-color: white;
+          background: ${theme.colors.text};
         `}
       />
       <div

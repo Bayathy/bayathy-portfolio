@@ -26,7 +26,7 @@ const HistoryBar: React.FC = () => {
             bottom: 0;
             width: 0.2rem;
             height: 100%;
-            background: white;
+            background: ${theme.colors.text};
           }
         `}
       >
