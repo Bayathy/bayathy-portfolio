@@ -17,7 +17,7 @@ const HistoryBar: React.FC = () => {
     >
       <div
         css={css`
-          .plate::before {
+          .plate:not(:last-child)::before {
             content: '';
             position: absolute;
             left: 1.4rem;
@@ -29,11 +29,6 @@ const HistoryBar: React.FC = () => {
             width: 0.2rem;
             height: 100%;
             background: white;
-          }
-
-          .plate:last-child:before {
-            content: '';
-            background: ${theme.colors.primary};
           }
         `}
       >
