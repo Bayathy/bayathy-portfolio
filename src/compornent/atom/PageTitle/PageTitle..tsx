@@ -20,6 +20,7 @@ export const PageTitle: React.FC = () => {
         <p
           css={css`
             font-size: 1.5rem;
+            font-weight: bold;
           `}
         >
           {title}

@@ -25,7 +25,7 @@ const Tabitembox: React.FC<Tabitem> = ({ name, isSlect, onClick }) => {
         align-items: center;
         justify-content: center;
         width: 30%;
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding-top: 10px;
         padding-bottom: 10px;
         ${borderStyle}
