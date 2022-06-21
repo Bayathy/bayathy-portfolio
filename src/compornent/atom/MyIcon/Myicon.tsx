@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Image from 'next/image'
-import Imagesrc from './Icon2.jpg'
+import Imagesrc from './Icon3.jpg'
 
 export const Myicon: React.FC = () => {
   return (

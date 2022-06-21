@@ -14,17 +14,19 @@ const Tabitembox: React.FC<Tabitem> = ({ name, isSlect, onClick }) => {
   const borderStyle =
     isSlect == true
       ? css`
-          border-bottom: 0.3rem solid ${theme.colors.secondary};
+          color: ${theme.colors.text};
         `
-      : undefined
+      : css`
+          color: ${theme.colors.secondary};
+        `
 
   return (
     <div
       css={css`
         display: flex;
+        width: 30%;
         align-items: center;
         justify-content: center;
-        width: 30%;
         font-size: 1.2rem;
         padding-top: 10px;
         padding-bottom: 10px;
