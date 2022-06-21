@@ -41,7 +41,10 @@ export const HistoryPlate: React.FC<HistoryPlate> = ({ text, date }) => {
       >
         <div
           css={css`
-            width: 90%;
+            width: 80%;
+            @media (min-width: 420px) {
+              width: 90%;
+            }
             border-radius: 10px;
             background: ${theme.colors.extra};
             line-height: 1;

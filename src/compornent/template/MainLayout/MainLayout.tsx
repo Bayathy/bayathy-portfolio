@@ -33,7 +33,17 @@ const MainLayout: React.FC = () => {
           }
 
           ::-webkit-scrollbar {
-            width: 0px;
+            width: 10px;
+            height: 20px;
+          }
+
+          ::-webkit-scrollbar-track {
+            background-color: ${theme.colors.secondary};
+          }
+
+          ::-webkit-scrollbar-thumb {
+            background: white;
+            border-radius: 100px;
           }
         `}
       />

@@ -27,7 +27,7 @@ export const WorksPanel: React.FC = () => {
           >
             <div
               css={css`
-                width: 30%;
+                width: 40%;
                 margin: auto;
               `}
             >
@@ -47,13 +47,12 @@ export const WorksPanel: React.FC = () => {
             <div>
               <p
                 css={css`
-                  font-size: 0.8rem;
+                  font-size: 1rem;
                   text-align: center;
                   font-weight: lighter;
-                  line-height: 2;
                 `}
               >
-                HackU KOSEN
+                Text
               </p>
             </div>
             <div
@@ -65,7 +64,7 @@ export const WorksPanel: React.FC = () => {
             >
               <div
                 css={css`
-                  padding: 0.5rem;
+                  padding: 0.4rem;
                   border-radius: 999px;
                   background: ${theme.colors.primary};
                   display: flex;
