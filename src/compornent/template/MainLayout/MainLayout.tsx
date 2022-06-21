@@ -27,7 +27,7 @@ const MainLayout: React.FC = () => {
           * {
             margin: 0;
             padding: 0;
-            font-family: Bahnschrift, 'Yu Gothic', '游ゴシック', YuGothic, '游ゴシック体',
+            font-family: 'Anek Malayalam', 'Yu Gothic', '游ゴシック', YuGothic, '游ゴシック体',
               sans-serif;
             user-select: none;
           }
