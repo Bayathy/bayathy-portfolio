@@ -10,38 +10,14 @@ export const WorksPanel: React.FC = () => {
       <div
         css={css`
           box-sizing: inherit;
-          width: max-content;
           position: relative;
         `}
       >
-        <div
-          css={css`
-            position: absolute;
-            top: -0.5rem;
-            left: 16.5rem;
-            z-index: 999;
-            border-radius: 999px;
-            width: 1.2rem;
-            height: 1.2rem;
-            padding: 0.5rem;
-            background: ${theme.colors.extra};
-
-            :hover {
-              border: 1px black solid;
-            }
-          `}
-        >
-          <Icon width={'100%'} icon="charm:link-external" />
-        </div>
         <Card
           className={'Card'}
           style={css`
-            width: 18rem;
+            width: 16rem;
             position: relative;
-
-            :hover {
-              border: 1px solid black;
-            }
           `}
         >
           <div
@@ -62,10 +38,43 @@ export const WorksPanel: React.FC = () => {
                 css={css`
                   text-align: center;
                   font-size: 1.5rem;
+                  line-height: 1;
                 `}
               >
                 Title
               </p>
+            </div>
+            <div>
+              <p
+                css={css`
+                  font-size: 0.8rem;
+                  text-align: center;
+                  font-weight: lighter;
+                  line-height: 2;
+                `}
+              >
+                HackU KOSEN
+              </p>
+            </div>
+            <div
+              css={css`
+                display: flex;
+                align-content: end;
+                justify-content: end;
+              `}
+            >
+              <div
+                css={css`
+                  padding: 0.5rem;
+                  border-radius: 999px;
+                  background: ${theme.colors.primary};
+                  display: flex;
+                  justify-content: center;
+                  align-content: center;
+                `}
+              >
+                <Icon icon="charm:link-external" />
+              </div>
             </div>
           </div>
         </Card>
