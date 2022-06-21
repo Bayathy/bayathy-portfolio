@@ -42,7 +42,7 @@ const MainLayout: React.FC = () => {
           }
 
           ::-webkit-scrollbar-thumb {
-            background: white;
+            background: ${theme.colors.extra};
             border-radius: 100px;
           }
         `}
