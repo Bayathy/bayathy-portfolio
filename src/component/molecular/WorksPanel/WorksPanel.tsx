@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, ContentContainer } from '../../atom'
 import { css, useTheme } from '@emotion/react'
 import { Icon } from '@iconify/react'
+import Link from 'next/link'
 
 export const WorksPanel: React.FC = () => {
   const theme = useTheme()
@@ -63,18 +64,20 @@ export const WorksPanel: React.FC = () => {
                   justify-content: end;
                 `}
               >
-                <div
-                  css={css`
-                    padding: 0.4rem;
-                    border-radius: 999px;
-                    background: ${theme.colors.primary};
-                    display: flex;
-                    justify-content: center;
-                    align-content: center;
-                  `}
-                >
-                  <Icon icon="charm:link-external" />
-                </div>
+                <Link href={'/work'}>
+                  <div
+                    css={css`
+                      padding: 0.4rem;
+                      border-radius: 999px;
+                      background: ${theme.colors.primary};
+                      display: flex;
+                      justify-content: center;
+                      align-content: center;
+                    `}
+                  >
+                    <Icon icon="charm:link-external" />
+                  </div>
+                </Link>
               </div>
             </div>
           </Card>
