@@ -33,15 +33,29 @@ export const WorkDeteal: React.FC = () => {
           style={css`
             width: 80%;
             margin: auto;
+            padding: ${theme.padding.small};
           `}
         >
-          <p
+          <p>HackUで制作した作品です。高専生の五人でチームを組みいくつか賞を受賞しました。</p>
+          <Space space={1} margin />
+          <div
             css={css`
-              padding: ${theme.padding.small};
+              width: max-content;
+              background: ${theme.colors.primary};
+              text-align: center;
+              border-radius: 20px;
+              font-size: 0.8rem;
             `}
           >
-            HackUで制作した作品です。高専生の五人でチームを組みいくつか賞を受賞しました。
-          </p>
+            <p
+              css={css`
+                padding: 0.5rem;
+                line-height: 1;
+              `}
+            >
+              技術スタック
+            </p>
+          </div>
         </Card>
       </ContentContainer>
     </>
