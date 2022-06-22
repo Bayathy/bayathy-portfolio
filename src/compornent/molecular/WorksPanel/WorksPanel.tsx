@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Card, ContentContainer } from '../../atom'
 import { css, useTheme } from '@emotion/react'
 import { Icon } from '@iconify/react'
-import { Modal } from '../Modal'
 
 export const WorksPanel: React.FC = () => {
   const theme = useTheme()
-  const [isModalOpen, setModalState] = useState<boolean>(false)
 
   return (
     <>
-      {isModalOpen && <Modal />}
       <ContentContainer>
         <div
           css={css`
