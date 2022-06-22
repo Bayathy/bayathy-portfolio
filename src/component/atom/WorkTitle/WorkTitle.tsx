@@ -19,11 +19,11 @@ export const WorkTitle: React.FC<WorkTitle> = ({ title }) => {
         css={css`
           padding-left: ${theme.padding.small};
           border-bottom: 1px solid ${theme.colors.text};
-          font-size: 2rem;
-          line-height: 1;
+          font-size: 1.5rem;
+          font-weight: bold;
         `}
       >
-        test
+        Togather
       </p>
     </div>
   )
