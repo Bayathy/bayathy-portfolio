@@ -1,8 +1,16 @@
 import { NextPage } from 'next'
-import { WorkDeteal } from '../component/organism/WorkDeteal/WorkDeteal'
+import { WorksLayout } from '../component/template'
+import ThemeContextProvider from '../context/ThemeContextProvider/ThemeContextProvider'
+import PageContextProvider from '../context/PageContextProvider/PageContextProvider'
 
 const Work: NextPage = () => {
-  return <WorkDeteal />
+  return (
+    <ThemeContextProvider>
+      <PageContextProvider>
+        <WorksLayout />
+      </PageContextProvider>
+    </ThemeContextProvider>
+  )
 }
 
 export default Work

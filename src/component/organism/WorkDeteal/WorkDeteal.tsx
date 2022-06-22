@@ -7,7 +7,7 @@ export const WorkDeteal: React.FC = () => {
     <>
       <ContentContainer>
         <div>
-          <Image src={''} />
+          <Image src={'/dummy.png'} width={100} height={100} />
         </div>
       </ContentContainer>
     </>
