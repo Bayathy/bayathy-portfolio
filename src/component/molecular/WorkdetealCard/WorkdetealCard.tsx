@@ -13,7 +13,13 @@ export const WorkdetealCard: React.FC = () => {
         padding: ${theme.padding.small};
       `}
     >
-      <p>HackUで制作した作品です。高専生の五人でチームを組みいくつか賞を受賞しました。</p>
+      <div
+        css={css`
+          padding: 0.5rem;
+        `}
+      >
+        <p>HackUで制作した作品です。高専生の五人でチームを組みいくつか賞を受賞しました。</p>
+      </div>
       <Space space={1} margin />
       <div
         css={css`
