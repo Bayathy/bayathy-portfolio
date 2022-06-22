@@ -1,13 +1,11 @@
 import React from 'react'
-import { css, useTheme } from '@emotion/react'
+import { css } from '@emotion/react'
 import { usePageState } from '../../../context/PageContextProvider/pageContext'
 import { Space } from '../../atom'
 import { About, Footer, Header, TopContents, Works } from '../../organism'
 import { GlobalStyle } from '../../../style/global'
 
 export const MainLayout: React.FC = () => {
-  const theme = useTheme()
-
   const { page } = usePageState()
 
   return (
