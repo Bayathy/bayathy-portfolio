@@ -11,6 +11,8 @@ export const Footer: React.FC = () => {
         background: ${theme.colors.primary};
         border-top: 1px solid ${theme.colors.extra};
         text-align: center;
+        position: relative;
+        bottom: 0;
       `}
     >
       <p>@Bayathy</p>

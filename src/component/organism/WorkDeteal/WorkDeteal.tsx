@@ -1,9 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import { css } from '@emotion/react'
-import { ContentContainer, Space, WorkTitle } from '../../atom'
+import { css, useTheme } from '@emotion/react'
+import { Card, ContentContainer, Space, WorkTitle } from '../../atom'
 
 export const WorkDeteal: React.FC = () => {
+  const theme = useTheme()
+
   return (
     <>
       <ContentContainer>
@@ -26,6 +28,21 @@ export const WorkDeteal: React.FC = () => {
         <div>
           <WorkTitle />
         </div>
+        <Space space={2} margin />
+        <Card
+          style={css`
+            width: 80%;
+            margin: auto;
+          `}
+        >
+          <p
+            css={css`
+              padding: ${theme.padding.small};
+            `}
+          >
+            HackUで制作した作品です。高専生の五人でチームを組みいくつか賞を受賞しました。
+          </p>
+        </Card>
       </ContentContainer>
     </>
   )

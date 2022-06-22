@@ -1,21 +1,16 @@
 import React from 'react'
-import { css } from '@emotion/react'
-import { GlobalStyle } from '../../../style/global'
 import { Header } from '../../organism'
 import { WorkDeteal } from '../../organism/WorkDeteal/WorkDeteal'
 import { Space } from '../../atom'
+import { BaseLayout } from '../BaseLayout'
 
 export const WorksLayout: React.FC = () => {
   return (
-    <div
-      css={css`
-        margin: auto;
-      `}
-    >
-      <GlobalStyle />
+    <BaseLayout>
       <Header />
       <Space space={7.5} margin />
       <WorkDeteal />
-    </div>
+      <Space space={4} margin />
+    </BaseLayout>
   )
 }

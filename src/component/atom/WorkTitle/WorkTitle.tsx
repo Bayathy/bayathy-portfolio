@@ -23,7 +23,7 @@ export const WorkTitle: React.FC<WorkTitle> = ({ title }) => {
           font-weight: bold;
         `}
       >
-        Togather
+        Test
       </p>
     </div>
   )
