@@ -11,7 +11,6 @@ export const WorksPanel: React.FC = () => {
       <ContentContainer>
         <div
           css={css`
-            box-sizing: inherit;
             position: relative;
           `}
         >
@@ -74,7 +73,7 @@ export const WorksPanel: React.FC = () => {
                     align-content: center;
                   `}
                 >
-                  <Icon onClick={() => setModalState(!isModalOpen)} icon="charm:link-external" />
+                  <Icon icon="charm:link-external" />
                 </div>
               </div>
             </div>
