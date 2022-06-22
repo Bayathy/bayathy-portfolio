@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import ThemeContextProvider from '../context/ThemeContextProvider/ThemeContextProvider'
-import MainLayout from '../compornent/template/MainLayout/MainLayout'
+import { MainLayout } from '../component/template/MainLayout'
 import PageContextProvider from '../context/PageContextProvider/PageContextProvider'
 
 const Home: NextPage = () => {

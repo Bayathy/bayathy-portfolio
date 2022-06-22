@@ -5,7 +5,7 @@ import { Space } from '../../atom'
 import { About, Footer, Header, TopContents, Works } from '../../organism'
 import { GlobalStyle } from '../../../style/global'
 
-const MainLayout: React.FC = () => {
+export const MainLayout: React.FC = () => {
   const theme = useTheme()
 
   const { page } = usePageState()
@@ -28,5 +28,3 @@ const MainLayout: React.FC = () => {
     </div>
   )
 }
-
-export default MainLayout
