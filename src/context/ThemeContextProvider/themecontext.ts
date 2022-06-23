@@ -1,14 +1,14 @@
 import { createContext, useContext } from 'react'
 
 type ThemeContextType = {
-  colorMode: 'lightTheme' | 'darkTheme'
-  setColorMode: () => void
+   colorMode: 'lightTheme' | 'darkTheme'
+   setColorMode: () => void
 }
 
 const defaultContext: ThemeContextType = {
-  colorMode: 'lightTheme',
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setColorMode: () => {}
+   colorMode: 'lightTheme',
+   // eslint-disable-next-line @typescript-eslint/no-empty-lib
+   setColorMode: () => {}
 }
 
 export const ThemeContext = createContext<ThemeContextType>(defaultContext)
