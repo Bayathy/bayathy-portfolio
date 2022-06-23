@@ -5,7 +5,7 @@ import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
-import { Workpostmatter } from '../type/Workpost'
+import { WorkPostmatter } from '../type/Workpost'
 
 const postdir = path.resolve(process.cwd(), 'posts')
 
@@ -23,7 +23,7 @@ export async function getWorkPostData(id: string) {
       .process(matterResult.content)
       .then((data) => data.toString())
 
-   return matterResult.data as Workpostmatter
+   return matterResult.data as WorkPostmatter
 }
 
 export async function getAllWorkPostId() {
