@@ -31,7 +31,7 @@ export const WorkDeteal: React.FC<WorkPost> = ({ data }) => {
                <WorkTitle title={data.title} />
             </div>
             <Space space={2} margin />
-            <WorkdetealCard />
+            <WorkdetealCard data={data} />
          </ContentContainer>
       </>
    )

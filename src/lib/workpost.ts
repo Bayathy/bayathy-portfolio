@@ -23,7 +23,10 @@ export async function getWorkPostData(id: string) {
       .process(matterResult.content)
       .then((data) => data.toString())
 
-   return matterResult.data as WorkPostmatter
+   const content = contentHtml.replace(/<p>|<\/p>/g, '')
+   const result = { content, ...matterResult.data }
+
+   return result as WorkPostmatter
 }
 
 export async function getAllWorkPostId() {

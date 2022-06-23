@@ -1,7 +1,9 @@
-export type Workpostmatter = {
+export type WorkPostmatter = {
    title?: string
+   tech?: string
+   content?: string
 }
 
 export type WorkPost = {
-   data: Workpostmatter
+   data: WorkPostmatter
 }

@@ -1,3 +1,5 @@
 ---
-title: "Two Forms of Pre-rendering"
+title: "Test"
+tech: "Typescript"
 ---
+This is test
