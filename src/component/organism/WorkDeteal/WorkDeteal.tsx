@@ -1,30 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { css, useTheme } from '@emotion/react'
 import { ContentContainer, Space, WorkTitle } from '../../atom'
 import { WorkdetealCard } from '../../molecular'
-import { getpostData, Workpostmatter } from '../../../lib/post'
+import { WorkPost } from '../../../type/Workpost'
 
-type Workpost = {
-   testtext: Workpostmatter
-}
-
-export async function getServerSideProps() {
-   const testtext = await getpostData('test').then((data) => data)
-
-   return {
-      props: {
-         testtext
-      } // will be passed to the page component as props
-   }
-}
-
-export const WorkDeteal: React.FC<Workpost> = ({ testtext }) => {
+export const WorkDeteal: React.FC<WorkPost> = ({ data }) => {
    const theme = useTheme()
-
-   useEffect(() => {
-      alert(testtext)
-   })
 
    return (
       <>
@@ -46,7 +28,7 @@ export const WorkDeteal: React.FC<Workpost> = ({ testtext }) => {
             </div>
             <Space space={3} margin />
             <div>
-               <WorkTitle />
+               <WorkTitle title={data.title} />
             </div>
             <Space space={2} margin />
             <WorkdetealCard />

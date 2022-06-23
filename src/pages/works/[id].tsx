@@ -1,13 +1,9 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { WorksLayout } from '../../component/template'
-import { Workpostmatter } from '../../type/Workpost'
 import { getAllWorkPostId, getWorkPostData } from '../../lib/workpost'
+import { WorkPost } from '../../type/Workpost'
 
-export type WorkProps = {
-   data: Workpostmatter
-}
-
-export const getStaticProps: GetStaticProps<WorkProps> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<WorkPost> = async ({ params }) => {
    const id = params!.id
 
    const data = await getWorkPostData(id as string).then((data) => data)
@@ -28,7 +24,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 // eslint-disable-next-line react/prop-types
-const Work: NextPage<WorkProps> = ({ data }) => {
+const Work: NextPage<WorkPost> = ({ data }) => {
    return <WorksLayout data={data} />
 }
 

@@ -5,84 +5,84 @@ import { Icon } from '@iconify/react'
 import Link from 'next/link'
 
 export const WorksPanel: React.FC = () => {
-  const theme = useTheme()
+   const theme = useTheme()
 
-  return (
-    <>
-      <ContentContainer>
-        <div
-          css={css`
-            position: relative;
-          `}
-        >
-          <Card
-            className={'Card'}
-            style={css`
-              width: 16rem;
-              position: relative;
-            `}
-          >
+   return (
+      <>
+         <ContentContainer>
             <div
-              css={css`
-                padding: ${theme.padding.small};
-              `}
+               css={css`
+                  position: relative;
+               `}
             >
-              <div
-                css={css`
-                  width: 40%;
-                  margin: auto;
-                `}
-              >
-                <Icon width={'100%'} icon="charm:people"></Icon>
-              </div>
-              <div>
-                <p
-                  css={css`
-                    text-align: center;
-                    font-size: 1.5rem;
-                    line-height: 1;
+               <Card
+                  className={'Card'}
+                  style={css`
+                     width: 16rem;
+                     position: relative;
                   `}
-                >
-                  Title
-                </p>
-              </div>
-              <div>
-                <p
-                  css={css`
-                    font-size: 1rem;
-                    text-align: center;
-                    font-weight: lighter;
-                  `}
-                >
-                  Text
-                </p>
-              </div>
-              <div
-                css={css`
-                  display: flex;
-                  align-content: end;
-                  justify-content: end;
-                `}
-              >
-                <Link href={'/work'}>
+               >
                   <div
-                    css={css`
-                      padding: 0.4rem;
-                      border-radius: 999px;
-                      background: ${theme.colors.primary};
-                      display: flex;
-                      justify-content: center;
-                      align-content: center;
-                    `}
+                     css={css`
+                        padding: ${theme.padding.small};
+                     `}
                   >
-                    <Icon icon="charm:link-external" />
+                     <div
+                        css={css`
+                           width: 40%;
+                           margin: auto;
+                        `}
+                     >
+                        <Icon width={'100%'} icon="charm:people"></Icon>
+                     </div>
+                     <div>
+                        <p
+                           css={css`
+                              text-align: center;
+                              font-size: 1.5rem;
+                              line-height: 1;
+                           `}
+                        >
+                           Title
+                        </p>
+                     </div>
+                     <div>
+                        <p
+                           css={css`
+                              font-size: 1rem;
+                              text-align: center;
+                              font-weight: lighter;
+                           `}
+                        >
+                           Text
+                        </p>
+                     </div>
+                     <div
+                        css={css`
+                           display: flex;
+                           align-content: end;
+                           justify-content: end;
+                        `}
+                     >
+                        <Link href={'/work/test'}>
+                           <div
+                              css={css`
+                                 padding: 0.4rem;
+                                 border-radius: 999px;
+                                 background: ${theme.colors.primary};
+                                 display: flex;
+                                 justify-content: center;
+                                 align-content: center;
+                              `}
+                           >
+                              <Icon icon="charm:link-external" />
+                           </div>
+                        </Link>
+                     </div>
                   </div>
-                </Link>
-              </div>
+               </Card>
             </div>
-          </Card>
-        </div>
-      </ContentContainer>
-    </>
-  )
+         </ContentContainer>
+      </>
+   )
 }
