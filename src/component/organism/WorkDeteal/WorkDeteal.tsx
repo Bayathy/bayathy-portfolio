@@ -1,20 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { css, useTheme } from '@emotion/react'
 import { ContentContainer, Space, WorkTitle } from '../../atom'
 import { WorkdetealCard } from '../../molecular'
-import { getpostData } from '../../../lib/post'
+import { getpostData, Workpostmatter } from '../../../lib/post'
 
-export const WorkDeteal: React.FC = () => {
+type Workpost = {
+   testtext: Workpostmatter
+}
+
+export async function getServerSideProps() {
+   const testtext = await getpostData('test').then((data) => data)
+
+   return {
+      props: {
+         testtext
+      } // will be passed to the page component as props
+   }
+}
+
+export const WorkDeteal: React.FC<Workpost> = ({ testtext }) => {
    const theme = useTheme()
 
-   const [testtext, setText] = useState('')
-
    useEffect(() => {
-      const titlePromise = getpostData('test')
-      titlePromise.then((data) => {
-         setText(data.title)
-      })
+      alert(testtext)
    })
 
    return (

@@ -1,5 +1,5 @@
-import path from 'node:path'
-import fs from 'node:fs'
+import fs from 'fs'
+import path from 'path'
 import matter from 'gray-matter'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
