@@ -11,7 +11,7 @@ export const getStaticProps: GetStaticProps = async () => {
    }
 }
 
-const Work: NextPage = (data: string) => {
+const Work: NextPage<string[]> = (data: string[]) => {
    return <WorksListLayout />
 }
 
