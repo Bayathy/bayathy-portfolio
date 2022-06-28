@@ -1,6 +1,7 @@
 export type WorkPostmatter = {
    title?: string
    tech?: string
+   ImageURL?: string
    content?: string
 }
 

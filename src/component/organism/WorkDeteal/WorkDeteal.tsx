@@ -21,7 +21,7 @@ export const WorkDeteal: React.FC<WorkPost> = ({ data }) => {
             >
                <Image
                   style={{ borderRadius: '10px' }}
-                  src={'/Icon3.jpg'}
+                  src={data.ImageURL! ? data.ImageURL : '/dummy.jpg'}
                   layout={'fill'}
                   objectFit={'cover'}
                />

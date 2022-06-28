@@ -24,6 +24,7 @@ export async function getWorkPostData(id: string) {
       .then((data) => data.toString())
 
    const content = contentHtml.replace(/<p>|<\/p>/g, '')
+
    const result = { content, ...matterResult.data }
 
    return result as WorkPostmatter
