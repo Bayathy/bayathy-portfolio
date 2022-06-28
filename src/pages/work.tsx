@@ -1,12 +1,16 @@
 import type { GetStaticProps, NextPage } from 'next'
 import { getAllWorksName } from '../lib/workpost'
 import { WorksListLayout } from '../component/template/WorksListLayout'
+import { useEffect } from 'react'
 
 export type WorkProperty = {
    data: string[]
 }
 
 const Work: NextPage<WorkProperty> = ({ data }) => {
+   useEffect(() => {
+      alert(data)
+   })
    return <WorksListLayout data={data} />
 }
 

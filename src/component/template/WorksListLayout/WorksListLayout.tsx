@@ -12,7 +12,7 @@ export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
          <Space space={4} margin />
          <>
             {data.map((index, key) => {
-               return <WorksPanel data={index} key={key} />
+               return <WorksPanel title={index} key={key} />
             })}
          </>
          <Space space={4} margin />

@@ -50,17 +50,6 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title }) => {
                            {title}
                         </p>
                      </div>
-                     <div>
-                        <p
-                           css={css`
-                              font-size: 1rem;
-                              text-align: center;
-                              font-weight: lighter;
-                           `}
-                        >
-                           Text
-                        </p>
-                     </div>
                      <div
                         css={css`
                            display: flex;
