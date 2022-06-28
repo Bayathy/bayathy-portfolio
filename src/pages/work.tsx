@@ -1,8 +1,18 @@
-import type { NextPage } from 'next'
-import { WorkLayout } from '../component/template/WorkLayout'
+import type { GetStaticProps, NextPage } from 'next'
+import { getAllWorkPostId } from '../lib/workpost'
+import { WorksListLayout } from '../component/template/WorksListLayout'
 
-const Work: NextPage = () => {
-   return <WorkLayout />
+export const getStaticProps: GetStaticProps = async () => {
+   const data = await getAllWorkPostId().then((data) => data)
+   return {
+      props: {
+         data
+      }
+   }
+}
+
+const Work: NextPage = (data: string) => {
+   return <WorksListLayout />
 }
 
 export default Work

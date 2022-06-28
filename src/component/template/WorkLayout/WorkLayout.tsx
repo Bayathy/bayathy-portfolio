@@ -1,14 +1,16 @@
-import { BaseLayout } from '../BaseLayout'
-import { TopContents, Works } from '../../organism'
-import { Space } from '../../atom'
 import React from 'react'
+import { Header } from '../../organism'
+import { WorkDeteal } from '../../organism/WorkDeteal'
+import { Space } from '../../atom'
+import { BaseLayout } from '../BaseLayout'
+import { WorkPost } from '../../../type/Workpost'
 
-export const WorkLayout: React.FC = () => {
+export const WorkLayout: React.FC<WorkPost> = ({ data }) => {
    return (
       <BaseLayout>
-         <TopContents />
-         <Space space={4} margin />
-         <Works />
+         <Header />
+         <Space space={7.5} margin />
+         <WorkDeteal data={data} />
          <Space space={4} margin />
       </BaseLayout>
    )
