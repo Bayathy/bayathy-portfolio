@@ -57,7 +57,7 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title }) => {
                            justify-content: end;
                         `}
                      >
-                        <Link href={'/work/test'}>
+                        <Link href={`works/${title}`}>
                            <div
                               css={css`
                                  padding: 0.4rem;
