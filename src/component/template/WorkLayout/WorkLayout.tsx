@@ -1,14 +1,14 @@
-import React from 'react'
-import { Space } from '../../atom'
-import { About, TopContents } from '../../organism'
 import { BaseLayout } from '../BaseLayout'
+import { TopContents, Works } from '../../organism'
+import { Space } from '../../atom'
+import React from 'react'
 
-export const MainLayout: React.FC = () => {
+export const WorkLayout: React.FC = () => {
    return (
       <BaseLayout>
          <TopContents />
          <Space space={4} margin />
-         <About />
+         <Works />
          <Space space={4} margin />
       </BaseLayout>
    )
