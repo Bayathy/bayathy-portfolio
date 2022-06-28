@@ -15,6 +15,9 @@ export const MenuTab: React.FC = () => {
             css={css`
                display: flex;
                width: 80%;
+               @media (max-width: 420px) {
+                  width: 90%;
+               }
                margin: auto;
                align-items: center;
                justify-content: space-around;
