@@ -1,5 +1,5 @@
 ---
-title: "Test"
+title: "test"
 tech: "Typescript"
 ImageURL : "/Icon3.jpg"
 ---
