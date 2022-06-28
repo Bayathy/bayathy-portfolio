@@ -40,3 +40,8 @@ export async function getAllWorkPostId() {
       }
    })
 }
+
+export async function getAllWorksName() {
+   const fileNames = fs.readdirSync(postdir)
+   return fileNames.map((fileName) => fileName.replace(/\.md$/, ''))
+}

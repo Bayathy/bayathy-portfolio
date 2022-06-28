@@ -4,7 +4,11 @@ import { css, useTheme } from '@emotion/react'
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
 
-export const WorksPanel: React.FC = () => {
+type WorksPanel = {
+   title: string
+}
+
+export const WorksPanel: React.FC<WorksPanel> = ({ title }) => {
    const theme = useTheme()
 
    return (
@@ -43,7 +47,7 @@ export const WorksPanel: React.FC = () => {
                               line-height: 1;
                            `}
                         >
-                           Title
+                           {title}
                         </p>
                      </div>
                      <div>

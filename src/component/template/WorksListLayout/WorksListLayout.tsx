@@ -2,15 +2,17 @@ import { BaseLayout } from '../BaseLayout'
 import { TopContents } from '../../organism'
 import { Space } from '../../atom'
 import React from 'react'
+import { WorkProperty } from '../../../pages/work'
+import { WorksPanel } from '../../molecular'
 
-export const WorksListLayout: React.FC<string[]> = (data) => {
+export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
    return (
       <BaseLayout>
          <TopContents />
          <Space space={4} margin />
          <>
-            {data.map((index) => {
-               return <p>aaa{index}</p>
+            {data.map((index, key) => {
+               return <WorksPanel data={index} key={key} />
             })}
          </>
          <Space space={4} margin />
