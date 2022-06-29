@@ -1,6 +1,8 @@
 import type { GetStaticProps, NextPage } from 'next'
 import { getAllWorksName } from '../lib/workpost'
 import { WorksListLayout } from '../component/template/WorksListLayout'
+import { useEffect } from 'react'
+import { usePageState } from '../context/PageContextProvider/pageContext'
 
 export type WorkProperty = {
    data: string[]
@@ -8,6 +10,11 @@ export type WorkProperty = {
 
 // eslint-disable-next-line react/prop-types
 const Work: NextPage<WorkProperty> = ({ data }) => {
+   const { setPage } = usePageState()
+
+   useEffect(() => {
+      setPage(1)
+   }, [])
    return <WorksListLayout data={data} />
 }
 

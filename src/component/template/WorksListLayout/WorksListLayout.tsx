@@ -2,8 +2,8 @@ import { BaseLayout } from '../BaseLayout'
 import { TopContents } from '../../organism'
 import { Space } from '../../atom'
 import React from 'react'
-import { WorkProperty } from '../../../pages/Work'
 import { WorksPanel } from '../../molecular'
+import { WorkProperty } from '../../../pages/Work'
 
 export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
    return (

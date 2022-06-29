@@ -29,7 +29,6 @@ export const MenuTab: React.FC = () => {
                name={'About Me'}
                isSlect={page[0]}
                onClick={() => {
-                  setPage(0)
                   router.push('./')
                }}
             />
@@ -37,14 +36,13 @@ export const MenuTab: React.FC = () => {
                name={'Works'}
                isSlect={page[1]}
                onClick={() => {
-                  setPage(1)
                   router.push('./Work')
                }}
             />
             <Tabitembox
                name={'Blog'}
                isSlect={page[2]}
-               onClick={() => setPage(2)}
+               onClick={() => router.push('./Work')}
             />
          </div>
       </ContentContainer>

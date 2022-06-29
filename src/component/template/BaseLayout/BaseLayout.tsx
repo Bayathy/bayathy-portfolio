@@ -5,28 +5,28 @@ import { css } from '@emotion/react'
 import { GlobalStyle } from '../../../style/global'
 
 type BaseLayout = {
-  children: React.ReactNode
+   children: React.ReactNode
 }
 
 export const BaseLayout: React.FC<BaseLayout> = ({ children }) => {
-  return (
-    <div
-      css={css`
-        margin: auto;
-      `}
-    >
-      <GlobalStyle />
+   return (
       <div
-        css={css`
-          min-height: calc(100vh - 7.5rem);
-        `}
+         css={css`
+            margin: auto;
+         `}
       >
-        <Header />
-        <Space space={7.5} margin />
-        {children}
-        <Space space={4} margin />
+         <GlobalStyle />
+         <div
+            css={css`
+               min-height: calc(100vh - 7.5rem);
+            `}
+         >
+            <Header />
+            <Space space={7.5} margin />
+            {children}
+            <Space space={4} margin />
+         </div>
+         <Footer />
       </div>
-      <Footer />
-    </div>
-  )
+   )
 }
