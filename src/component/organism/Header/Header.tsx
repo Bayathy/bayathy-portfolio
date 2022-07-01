@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { css, useTheme } from '@emotion/react'
 import { ModeToggleButton } from '../../molecular'
 import { ContentContainer } from '../../atom'
+import { useRouter } from 'next/router'
 
 export const Header: React.FC = () => {
    const theme = useTheme()
+   const router = useRouter()
+
+   useEffect(() => {
+      console.log(router.pathname)
+   })
 
    return (
       <div
@@ -25,6 +31,7 @@ export const Header: React.FC = () => {
                css={css`
                   display: flex;
                   justify-content: space-between;
+                  padding-left: 2rem;
                `}
             >
                <div
@@ -32,7 +39,7 @@ export const Header: React.FC = () => {
                      font-size: 1.3rem;
                   `}
                >
-                  <p>aaaa</p>
+                  <p>Bayathy</p>
                </div>
                <div
                   css={css`
