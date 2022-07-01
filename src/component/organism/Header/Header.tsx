@@ -24,9 +24,16 @@ export const Header: React.FC = () => {
             <div
                css={css`
                   display: flex;
-                  justify-content: end;
+                  justify-content: space-between;
                `}
             >
+               <div
+                  css={css`
+                     font-size: 1.3rem;
+                  `}
+               >
+                  <p>aaaa</p>
+               </div>
                <div
                   css={css`
                      padding-right: 2rem;

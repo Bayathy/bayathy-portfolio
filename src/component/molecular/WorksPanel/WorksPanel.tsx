@@ -3,6 +3,7 @@ import { Card, ContentContainer } from '../../atom'
 import { css, useTheme } from '@emotion/react'
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 type WorksPanel = {
    title: string
@@ -33,18 +34,25 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title }) => {
                   >
                      <div
                         css={css`
-                           width: 40%;
+                           width: 100%;
+                           aspect-ratio: 16/9;
                            margin: auto;
+                           position: relative;
+                           border-radius: 10px;
                         `}
                      >
-                        <Icon width={'100%'} icon="charm:people"></Icon>
+                        <Image
+                           src={'/icon3.jpg'}
+                           objectFit={'cover'}
+                           layout={'fill'}
+                           style={{ borderRadius: 10, zIndex: 1 }}
+                        />
                      </div>
                      <div>
                         <p
                            css={css`
                               text-align: center;
                               font-size: 1.5rem;
-                              line-height: 1;
                            `}
                         >
                            {title}
