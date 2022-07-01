@@ -11,7 +11,6 @@ export const WorkLayout: React.FC<WorkPost> = ({ data }) => {
          <Header />
          <Space space={7.5} margin />
          <WorkDeteal data={data} />
-         <Space space={4} margin />
       </BaseLayout>
    )
 }

@@ -4,9 +4,10 @@ import { ContentContainer, Space } from '../../atom'
 import React from 'react'
 import { WorksPanel } from '../../molecular'
 import { WorkProperty } from '../../../pages/Work'
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 
 export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
+   const theme = useTheme()
    return (
       <BaseLayout>
          <TopContents />
@@ -14,9 +15,10 @@ export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
          <ContentContainer>
             <div
                css={css`
-                  // display: flex;
-                  // justify-content: space-between;
-                  // flex-wrap: wrap;
+                  display: flex;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  gap: ${theme.margin.medium};
                `}
             >
                {data.map((index, key) => {

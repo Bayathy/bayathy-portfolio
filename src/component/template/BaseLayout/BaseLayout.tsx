@@ -24,8 +24,8 @@ export const BaseLayout: React.FC<BaseLayout> = ({ children }) => {
             <Header />
             <Space space={7.5} margin />
             {children}
-            <Space space={4} margin />
          </div>
+         <Space space={4} margin />
          <Footer />
       </div>
    )
