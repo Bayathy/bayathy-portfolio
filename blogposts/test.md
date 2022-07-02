@@ -1,5 +1,5 @@
 ---
-title : "test"
+title : "ブログを書く"
 ---
 
 # mokuzi
