@@ -16,7 +16,7 @@ export const ModeToggleButton: React.FC = () => {
                paddingTop: '10%',
                color: `${theme.colors.text}`
             }}
-            icon={colorMode === 'darkTheme' ? 'akar-icons:sun' : 'ci:moon'}
+            icon={colorMode === 'darkTheme' ? 'tabler:sun' : 'tabler:moon'}
             onClick={setColorMode}
          />
       </StyledButton>
