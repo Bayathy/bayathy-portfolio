@@ -2,10 +2,10 @@ import React from 'react'
 import { StyledButton } from '../../atom'
 import { Icon } from '@iconify/react'
 import { useTheme } from '@emotion/react'
+import { ModeToggleButton } from '../ModeToggleButton'
 
-export const MenuToggleButton: React.FC = () => {
+export const HeaderButtons: React.FC = () => {
    const theme = useTheme()
-
    return (
       <div>
          <StyledButton>
@@ -38,6 +38,7 @@ export const MenuToggleButton: React.FC = () => {
                icon={'tabler:notes'}
             />
          </StyledButton>
+         <ModeToggleButton />
       </div>
    )
 }

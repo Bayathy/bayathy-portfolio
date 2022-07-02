@@ -1,6 +1,5 @@
 import React from 'react'
 import { css, useTheme } from '@emotion/react'
-import { DropdownMenu, ModeToggleButton } from '../../molecular'
 import { ContentContainer } from '../../atom'
 
 export const Header: React.FC = () => {
@@ -28,14 +27,18 @@ export const Header: React.FC = () => {
                   padding-left: 2rem;
                `}
             >
-               <DropdownMenu />
+               <div
+                  css={css`
+                     font-size: 1.3rem;
+                  `}
+               >
+                  <p>Bayathy</p>
+               </div>
                <div
                   css={css`
                      padding-right: 1.5rem;
                   `}
-               >
-                  <ModeToggleButton />
-               </div>
+               ></div>
             </div>
          </ContentContainer>
       </div>
