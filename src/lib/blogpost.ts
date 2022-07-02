@@ -5,38 +5,38 @@ import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
-import { WorkPostmatter } from '../type/Workpost'
+import { BlogpostMatter } from '../type/Blogpost'
 
 const postdir = path.resolve(process.cwd(), 'blogposts')
 
 export async function getBlogPostData(id: string) {
-  const filepath = path.resolve(postdir, `${id}.md`)
-  const fileContents = fs.readFileSync(filepath, 'utf8')
+   const filepath = path.resolve(postdir, `${id}.md`)
+   const fileContents = fs.readFileSync(filepath, 'utf8')
 
-  const matterResult = matter(fileContents)
-  const processedContent = await unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(rehypeStringify)
+   const matterResult = matter(fileContents)
+   const processedContent = await unified()
+      .use(remarkParse)
+      .use(remarkRehype)
+      .use(rehypeStringify)
 
-  const contentHtml = await processedContent
-    .process(matterResult.content)
-    .then((data) => data.toString())
+   const contentHtml = await processedContent
+      .process(matterResult.content)
+      .then((data) => data.toString())
 
-  const content = contentHtml.replace(/<p>|<\/p>/g, '')
+   const content = contentHtml.replace(/<p>|<\/p>/g, '')
 
-  const result = { content, ...matterResult.data }
+   const result = { content, ...matterResult.data }
 
-  return result as WorkPostmatter
+   return result as BlogpostMatter
 }
 
 export async function getAllBlogPostId() {
-  const fileNames = fs.readdirSync(postdir)
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, '')
+   const fileNames = fs.readdirSync(postdir)
+   return fileNames.map((fileName) => {
+      return {
+         params: {
+            id: fileName.replace(/\.md$/, '')
+         }
       }
-    }
-  })
+   })
 }
