@@ -42,7 +42,7 @@ export const MenuTab: React.FC = () => {
             <Tabitembox
                name={'Blog'}
                isSlect={page[2]}
-               onClick={() => router.push('./Work')}
+               onClick={() => router.push('./Blog')}
             />
          </div>
       </ContentContainer>

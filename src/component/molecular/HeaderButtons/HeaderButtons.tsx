@@ -45,7 +45,7 @@ export const HeaderButtons: React.FC = () => {
                   color: `${theme.colors.text}`
                }}
                icon={'tabler:notes'}
-               onClick={() => router.push('./blog')}
+               onClick={() => router.push('./Blog')}
             />
          </StyledButton>
          <ModeToggleButton />
