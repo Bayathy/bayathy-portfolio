@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { css, useTheme } from '@emotion/react'
-import { ContentContainer, Space, WorkTitle } from '../../atom'
+import { ContentContainer, Space, TitleTypography } from '../../atom'
 import { WorkdetealCard } from '../../molecular'
 import { WorkPost } from '../../../type/Workpost'
 
@@ -28,7 +28,7 @@ export const WorkDeteal: React.FC<WorkPost> = ({ data }) => {
             </div>
             <Space space={3} margin />
             <div>
-               <WorkTitle title={data.title} />
+               <TitleTypography title={data.title} />
             </div>
             <Space space={2} margin />
             <WorkdetealCard data={data} />

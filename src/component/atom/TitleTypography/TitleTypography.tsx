@@ -1,11 +1,11 @@
 import React from 'react'
 import { css, useTheme } from '@emotion/react'
 
-type WorkTitle = {
+type TitleTypography = {
    title?: string
 }
 
-export const WorkTitle: React.FC<WorkTitle> = ({ title }) => {
+export const TitleTypography: React.FC<TitleTypography> = ({ title }) => {
    const theme = useTheme()
 
    return (
