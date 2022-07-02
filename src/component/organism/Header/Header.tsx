@@ -1,6 +1,7 @@
 import React from 'react'
 import { css, useTheme } from '@emotion/react'
 import { ContentContainer } from '../../atom'
+import { HeaderButtons } from '../../molecular'
 
 export const Header: React.FC = () => {
    const theme = useTheme()
@@ -38,7 +39,9 @@ export const Header: React.FC = () => {
                   css={css`
                      padding-right: 1.5rem;
                   `}
-               ></div>
+               >
+                  <HeaderButtons />
+               </div>
             </div>
          </ContentContainer>
       </div>

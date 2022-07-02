@@ -1,13 +1,20 @@
 import React from 'react'
 import { StyledButton } from '../../atom'
 import { Icon } from '@iconify/react'
-import { useTheme } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import { ModeToggleButton } from '../ModeToggleButton'
+import { useRouter } from 'next/router'
 
 export const HeaderButtons: React.FC = () => {
    const theme = useTheme()
+   const router = useRouter()
    return (
-      <div>
+      <div
+         css={css`
+            display: flex;
+            column-gap: 0.5rem;
+         `}
+      >
          <StyledButton>
             <Icon
                height={'80%'}
@@ -16,6 +23,7 @@ export const HeaderButtons: React.FC = () => {
                   color: `${theme.colors.text}`
                }}
                icon={'tabler:user'}
+               onClick={() => router.push('./')}
             />
          </StyledButton>
          <StyledButton>
@@ -26,6 +34,7 @@ export const HeaderButtons: React.FC = () => {
                   color: `${theme.colors.text}`
                }}
                icon={'tabler:tool'}
+               onClick={() => router.push('./Work')}
             />
          </StyledButton>
          <StyledButton>
@@ -36,6 +45,7 @@ export const HeaderButtons: React.FC = () => {
                   color: `${theme.colors.text}`
                }}
                icon={'tabler:notes'}
+               onClick={() => router.push('./blog')}
             />
          </StyledButton>
          <ModeToggleButton />
