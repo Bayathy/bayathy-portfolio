@@ -11,7 +11,6 @@ class MyDocument extends Document {
                   href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@500&display=swap"
                   rel="stylesheet"
                />
-               <title>Bayathy&apos;s Portfolio</title>
             </Head>
             <body>
                <Main />
