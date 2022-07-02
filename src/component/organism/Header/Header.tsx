@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { css, useTheme } from '@emotion/react'
-import { ModeToggleButton } from '../../molecular'
+import { DropdownMenu, ModeToggleButton } from '../../molecular'
 import { ContentContainer } from '../../atom'
-import { useRouter } from 'next/router'
 
 export const Header: React.FC = () => {
    const theme = useTheme()
-   const router = useRouter()
-
-   useEffect(() => {
-      console.log(router.pathname)
-   })
 
    return (
       <div
@@ -34,9 +28,10 @@ export const Header: React.FC = () => {
                   padding-left: 2rem;
                `}
             >
+               <DropdownMenu />
                <div
                   css={css`
-                     padding-right: 2rem;
+                     padding-right: 1.5rem;
                   `}
                >
                   <ModeToggleButton />
