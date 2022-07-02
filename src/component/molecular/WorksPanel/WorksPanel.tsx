@@ -45,6 +45,7 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title }) => {
                   css={css`
                      text-align: center;
                      font-size: 1.5rem;
+                     line-height: 1.2;
                   `}
                >
                   {title}
