@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { getAllBlogPostId, getBlogPostData } from '../../lib/blogpost'
 import { BlogPost } from '../../type/Blogpost'
-import { BlogLayout } from '../../component/template'
+import { ArticleLayout } from '../../component/template'
 
 export const getStaticProps: GetStaticProps<BlogPost> = async ({ params }) => {
    const id = params!.id
@@ -25,7 +25,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 // eslint-disable-next-line react/prop-types
 const Article: NextPage<BlogPost> = ({ data }) => {
-   return <BlogLayout />
+   return <ArticleLayout data={data} />
 }
 
 export default Article

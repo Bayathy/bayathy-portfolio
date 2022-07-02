@@ -23,7 +23,7 @@ export const HeaderButtons: React.FC = () => {
                   color: `${theme.colors.text}`
                }}
                icon={'tabler:user'}
-               onClick={() => router.push('./')}
+               onClick={() => router.push('/')}
             />
          </StyledButton>
          <StyledButton>
@@ -34,7 +34,7 @@ export const HeaderButtons: React.FC = () => {
                   color: `${theme.colors.text}`
                }}
                icon={'tabler:tool'}
-               onClick={() => router.push('./Work')}
+               onClick={() => router.push('/Work')}
             />
          </StyledButton>
          <StyledButton>
@@ -45,7 +45,7 @@ export const HeaderButtons: React.FC = () => {
                   color: `${theme.colors.text}`
                }}
                icon={'tabler:notes'}
-               onClick={() => router.push('./Blog')}
+               onClick={() => router.push('/Blog')}
             />
          </StyledButton>
          <ModeToggleButton />
