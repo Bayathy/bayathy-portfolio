@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import { getAllWorksName } from '../lib/workpost'
-import { WorksListLayout } from '../component/template/WorksListLayout'
+import { WorksListLayout } from '../component/template'
 import { useEffect } from 'react'
 import { usePageState } from '../context/PageContextProvider/pageContext'
 
