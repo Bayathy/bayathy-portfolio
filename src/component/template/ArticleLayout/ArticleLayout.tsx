@@ -41,7 +41,10 @@ export const ArticleLayout: React.FC<BlogPost> = ({ data }) => {
                   }
 
                   p {
-                     font-size: 1rem;
+                     font-size: 1.2rem;
+                     @media (max-width: 480px) {
+                        font-size: 1rem;
+                     }
                   }
                `}
                dangerouslySetInnerHTML={{ __html: data.content }}
