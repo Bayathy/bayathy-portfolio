@@ -7,7 +7,7 @@ import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import { WorkPostmatter } from '../type/Workpost'
 
-const postdir = path.resolve(process.cwd(), 'posts')
+const postdir = path.resolve(process.cwd(), 'workposts')
 
 export async function getWorkPostData(id: string) {
    const filepath = path.resolve(postdir, `${id}.md`)
