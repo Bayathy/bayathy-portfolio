@@ -19,11 +19,9 @@ export async function getBlogPostData(id: string) {
       .use(remarkRehype)
       .use(rehypeStringify)
 
-   const contentHtml = await processedContent
+   const content = await processedContent
       .process(matterResult.content)
       .then((data) => data.toString())
-
-   const content = contentHtml.replace(/<p>|<\/p>/g, '')
 
    const result = { content, ...matterResult.data }
 

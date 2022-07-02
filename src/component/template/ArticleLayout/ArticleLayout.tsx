@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BaseLayout } from '../BaseLayout'
 import { BlogPost } from '../../../type/Blogpost'
 import { ContentContainer, Space } from '../../atom'
@@ -6,6 +6,8 @@ import { css, useTheme } from '@emotion/react'
 
 export const ArticleLayout: React.FC<BlogPost> = ({ data }) => {
    const theme = useTheme()
+
+   useEffect(() => console.log(data.content))
 
    return (
       <BaseLayout>
@@ -32,7 +34,14 @@ export const ArticleLayout: React.FC<BlogPost> = ({ data }) => {
                   margin: auto;
 
                   h1 {
-                     font-size: 1.5rem;
+                     font-size: 1.8rem;
+                     @media (max-width: 480px) {
+                        font-size: 1.3rem;
+                     }
+                  }
+
+                  p {
+                     font-size: 1rem;
                   }
                `}
                dangerouslySetInnerHTML={{ __html: data.content }}
