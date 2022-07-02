@@ -36,13 +36,6 @@ export const Header: React.FC = () => {
             >
                <div
                   css={css`
-                     font-size: 1.3rem;
-                  `}
-               >
-                  <p>Bayathy</p>
-               </div>
-               <div
-                  css={css`
                      padding-right: 2rem;
                   `}
                >
