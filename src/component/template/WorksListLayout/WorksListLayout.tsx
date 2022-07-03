@@ -22,7 +22,13 @@ export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
                `}
             >
                {data.map((index, key) => {
-                  return <WorksPanel title={index} ImageSrc={} key={key} />
+                  return (
+                     <WorksPanel
+                        title={index.title}
+                        ImageSrc={index.ImageURL}
+                        key={key}
+                     />
+                  )
                })}
             </div>
          </ContentContainer>

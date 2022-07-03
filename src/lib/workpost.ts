@@ -43,9 +43,12 @@ export async function getAllWorkPostId() {
 
 export async function getAllWorksProperty() {
    const fileNames = fs.readdirSync(postdir)
-   const fileid = fileNames.map((fileName) => fileName.replace(/\.md$/, ''))
+   const AllFileProperty = fileNames.map((index) => {
+      const fileContents = fs.readFileSync(path.resolve(postdir, index), 'utf8')
+      const matterResult = matter(fileContents)
+      return matterResult.data as { title: string; ImageURL: string }
+   })
+   console.log(AllFileProperty)
 
-   const workproperty = fileid.map(
-      async (index) => await getWorkPostData(index).then((data) => data)
-   )
+   return AllFileProperty
 }

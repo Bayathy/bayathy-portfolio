@@ -3,10 +3,9 @@ import { getAllWorksProperty } from '../lib/workpost'
 import { WorksListLayout } from '../component/template'
 import { useEffect } from 'react'
 import { usePageState } from '../context/PageContextProvider/pageContext'
-import { WorkPostmatter } from '../type/Workpost'
 
 export type WorkProperty = {
-   data: WorkPostmatter[]
+   data: { title: string; ImageURL: string }[]
 }
 
 // eslint-disable-next-line react/prop-types
