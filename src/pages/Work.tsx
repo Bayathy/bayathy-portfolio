@@ -20,9 +20,7 @@ const Work: NextPage<WorkProperty> = ({ data }) => {
 }
 
 export const getStaticProps: GetStaticProps<WorkProperty> = async () => {
-   const data = await getAllWorksProperty().then((data) =>
-      data.map((data) => data)
-   )
+   const data = await getAllWorksProperty().then((data) => data)
    return {
       props: {
          data
