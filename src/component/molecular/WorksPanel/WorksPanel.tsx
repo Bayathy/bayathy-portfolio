@@ -39,6 +39,7 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title, ImageSrc }) => {
                   objectFit={'cover'}
                   layout={'fill'}
                   style={{ borderRadius: 10, zIndex: 1 }}
+                  priority={true}
                />
             </div>
             <div>
