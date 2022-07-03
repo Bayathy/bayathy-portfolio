@@ -1,11 +1,12 @@
 import type { GetStaticProps, NextPage } from 'next'
-import { getAllWorksName } from '../lib/workpost'
+import { getAllWorksProperty } from '../lib/workpost'
 import { WorksListLayout } from '../component/template'
 import { useEffect } from 'react'
 import { usePageState } from '../context/PageContextProvider/pageContext'
+import { WorkPostmatter } from '../type/Workpost'
 
 export type WorkProperty = {
-   data: string[]
+   data: WorkPostmatter[]
 }
 
 // eslint-disable-next-line react/prop-types
@@ -19,7 +20,9 @@ const Work: NextPage<WorkProperty> = ({ data }) => {
 }
 
 export const getStaticProps: GetStaticProps<WorkProperty> = async () => {
-   const data = await getAllWorksName().then((data) => data)
+   const data = await getAllWorksProperty().then((data) =>
+      data.map((data) => data)
+   )
    return {
       props: {
          data
