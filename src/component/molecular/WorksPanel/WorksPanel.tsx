@@ -7,9 +7,10 @@ import Image from 'next/image'
 
 type WorksPanel = {
    title: string
+   ImageSrc: string
 }
 
-export const WorksPanel: React.FC<WorksPanel> = ({ title }) => {
+export const WorksPanel: React.FC<WorksPanel> = ({ title, ImageSrc }) => {
    const theme = useTheme()
 
    return (
@@ -34,7 +35,7 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title }) => {
                `}
             >
                <Image
-                  src={'/icon3.jpg'}
+                  src={ImageSrc}
                   objectFit={'cover'}
                   layout={'fill'}
                   style={{ borderRadius: 10, zIndex: 1 }}
