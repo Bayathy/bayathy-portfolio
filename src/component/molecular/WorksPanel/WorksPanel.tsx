@@ -1,6 +1,8 @@
 import React from 'react'
-import { Card } from '../../atom'
+import { Card, Space } from '../../atom'
 import { css, useTheme } from '@emotion/react'
+import { Icon } from '@iconify/react'
+import Link from 'next/link'
 
 type WorksPanel = {
    title: string
@@ -51,6 +53,31 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title, ImageSrc }) => {
                   content content content content content content content
                   content content content content
                </p>
+            </div>
+            <Space space={0.5} margin />
+            <div
+               css={css`
+                  display: flex;
+                  width: 100%;
+                  height: 100%;
+                  justify-content: end;
+               `}
+            >
+               <Link href={`works/${title}`}>
+                  <div
+                     css={css`
+                        padding: 0.5rem;
+                        background: ${theme.colors.primary};
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 999px;
+                        width: fit-content;
+                     `}
+                  >
+                     <Icon width={'1.5rem'} icon={'tabler:info-square'} />
+                  </div>
+               </Link>
             </div>
          </div>
       </Card>
