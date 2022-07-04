@@ -1,14 +1,17 @@
 import React from 'react'
 import { TopContents } from '../../organism'
-import { Space } from '../../atom'
+import { ContentContainer, Space } from '../../atom'
 import { BaseLayout } from '../BaseLayout'
+import { ArticleListPanel } from '../../molecular'
 
 export const BlogLayout: React.FC = () => {
    return (
       <BaseLayout>
          <TopContents />
          <Space space={4} margin />
-
+         <ContentContainer>
+            <ArticleListPanel />
+         </ContentContainer>
          <Space space={4} margin />
       </BaseLayout>
    )
