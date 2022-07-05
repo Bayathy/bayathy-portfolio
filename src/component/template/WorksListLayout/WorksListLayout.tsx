@@ -11,7 +11,7 @@ export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
    return (
       <BaseLayout>
          <TopContents />
-         <Space space={4} margin />
+         <Space space={2} margin />
          <ContentContainer>
             <div
                css={css`

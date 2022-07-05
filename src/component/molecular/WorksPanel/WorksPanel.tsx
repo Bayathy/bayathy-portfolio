@@ -1,7 +1,6 @@
 import React from 'react'
-import { Card, Space } from '../../atom'
+import { Card } from '../../atom'
 import { css, useTheme } from '@emotion/react'
-import { Icon } from '@iconify/react'
 import Link from 'next/link'
 
 type WorksPanel = {
@@ -27,21 +26,22 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title, ImageSrc }) => {
             `}
          >
             <div>
-               <p
-                  css={css`
-                     text-align: left;
-                     font-size: 1.4rem;
-                  `}
-               >
-                  {title}
-               </p>
+               <Link href={`works/${title}`}>
+                  <a
+                     css={css`
+                        text-align: left;
+                        font-size: 1.4rem;
+
+                        :hover {
+                           text-decoration: underline;
+                        }
+                     `}
+                  >
+                     {title}
+                  </a>
+               </Link>
             </div>
-            <div
-               css={css`
-                  width: 95%;
-                  margin: auto;
-               `}
-            >
+            <div>
                <p
                   css={css`
                      width: inherit;
@@ -53,31 +53,6 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title, ImageSrc }) => {
                   content content content content content content content
                   content content content content
                </p>
-            </div>
-            <Space space={0.5} margin />
-            <div
-               css={css`
-                  display: flex;
-                  width: 100%;
-                  height: 100%;
-                  justify-content: end;
-               `}
-            >
-               <Link href={`works/${title}`}>
-                  <div
-                     css={css`
-                        padding: 0.5rem;
-                        background: ${theme.colors.primary};
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border-radius: 999px;
-                        width: fit-content;
-                     `}
-                  >
-                     <Icon width={'1.5rem'} icon={'tabler:info-square'} />
-                  </div>
-               </Link>
             </div>
          </div>
       </Card>
