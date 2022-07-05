@@ -48,7 +48,6 @@ export async function getAllWorksProperty() {
       const matterResult = matter(fileContents)
       return matterResult.data as { title: string; ImageURL: string }
    })
-   console.log(AllFileProperty)
 
    return AllFileProperty
 }
