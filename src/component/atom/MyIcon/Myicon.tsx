@@ -16,6 +16,7 @@ export const Myicon: React.FC = () => {
          <Image
             src={Imagesrc}
             layout={'fill'}
+            alt={'My Icon'}
             style={{ borderRadius: 999, zIndex: 1 }}
             priority={true}
          />

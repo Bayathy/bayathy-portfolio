@@ -24,6 +24,7 @@ export const WorkDeteal: React.FC<WorkPost> = ({ data }) => {
                   src={data.ImageURL! ? data.ImageURL : '/dummy.jpg'}
                   layout={'fill'}
                   objectFit={'cover'}
+                  alt={data.title}
                />
             </div>
             <Space space={3} margin />
