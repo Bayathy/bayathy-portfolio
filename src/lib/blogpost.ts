@@ -31,10 +31,9 @@ export async function getBlogPostData(id: string) {
 export function getSortedPostsData() {
    const files = fs.readdirSync(postdir)
    const AllPostData = files.map((index) => {
-      const fileName = index.replace(/\.md/, '')
-      const fullPath = path.join(postdir, `${index}.md`)
-
-      const matterResult = matter(fullPath)
+      const fullPath = path.join(postdir, index)
+      const fileContents = fs.readFileSync(fullPath, 'utf8')
+      const matterResult = matter(fileContents)
       return { ...(matterResult.data as { title: string; date: string }) }
    })
 
@@ -44,11 +43,17 @@ export function getSortedPostsData() {
 }
 
 export async function getAllBlogPostId() {
-   const fileNames = fs.readdirSync(postdir)
-   return fileNames.map((fileName) => {
+   const files = fs.readdirSync(postdir)
+   const AllPostData = files.map((index) => {
+      const fullPath = path.join(postdir, index)
+      const fileContents = fs.readFileSync(fullPath, 'utf8')
+      const matterResult = matter(fileContents)
+      return { ...(matterResult.data as { title: string; date: string }) }
+   })
+   return AllPostData.map((index) => {
       return {
          params: {
-            id: fileName.replace(/\.md$/, '')
+            id: index.title
          }
       }
    })

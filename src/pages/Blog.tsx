@@ -4,13 +4,18 @@ import { useEffect } from 'react'
 import { BlogLayout } from '../component/template'
 import { getSortedPostsData } from '../lib/blogpost'
 
-const Blog: NextPage = () => {
+export type PostList = {
+   data: { title: string; date: string }[]
+}
+
+// eslint-disable-next-line react/prop-types
+const Blog: NextPage<PostList> = ({ data }) => {
    const { setPage } = usePageState()
 
    useEffect(() => {
       setPage(2)
    }, [])
-   return <BlogLayout />
+   return <BlogLayout data={data} />
 }
 
 export const getStaticProps: GetStaticProps = async () => {

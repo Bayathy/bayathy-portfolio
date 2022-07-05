@@ -20,7 +20,7 @@ export const ArticleListPanel: React.FC<{ title: string; date: string }> = ({
                padding: ${theme.padding.small};
             `}
          >
-            <Link href={`posts/test`} passHref>
+            <Link href={`posts/${title}`} passHref>
                <a
                   css={css`
                      color: ${theme.colors.text};
