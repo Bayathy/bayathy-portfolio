@@ -28,6 +28,14 @@ export async function getBlogPostData(id: string) {
    return result as BlogpostMatter
 }
 
+export function getSortedPostsData() {
+   const files = fs.readdirSync(postdir)
+   const AllPostData = files.map((index) => {
+      const fileName = index.replace(/\.md/, '')
+      const fullPath = path.join(postdir, `${index}.md`)
+   })
+}
+
 export async function getAllBlogPostId() {
    const fileNames = fs.readdirSync(postdir)
    return fileNames.map((fileName) => {

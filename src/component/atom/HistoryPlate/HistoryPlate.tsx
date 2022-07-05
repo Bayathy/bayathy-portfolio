@@ -24,7 +24,7 @@ export const HistoryPlate: React.FC<HistoryPlate> = ({ text, date }) => {
                height: 0.5rem;
                border-radius: 50%;
                left: 1.15rem;
-               top: 0;
+               top: 10px;
                @media (min-width: 420px) {
                   left: 2.1rem;
                }
@@ -40,6 +40,7 @@ export const HistoryPlate: React.FC<HistoryPlate> = ({ text, date }) => {
                width: 100%;
             `}
          >
+            <p>{date}</p>
             <div
                css={css`
                   width: 80%;
@@ -54,7 +55,6 @@ export const HistoryPlate: React.FC<HistoryPlate> = ({ text, date }) => {
                   padding: ${theme.padding.small};
                `}
             >
-               <p>{date}</p>
                <p
                   css={css`
                      word-break: break-all;

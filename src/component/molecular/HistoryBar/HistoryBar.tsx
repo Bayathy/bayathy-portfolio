@@ -35,10 +35,10 @@ export const HistoryBar: React.FC = () => {
                   @media (min-width: 420px) {
                      left: 2.3rem;
                   }
-                  top: 10px;
+                  top: 20px;
                   bottom: 0;
                   width: 2px;
-                  height: 85%;
+                  height: 88%;
                   background: ${theme.colors.text};
                }
             `}

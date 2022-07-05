@@ -8,7 +8,7 @@ export const BlogLayout: React.FC = () => {
    return (
       <BaseLayout>
          <TopContents />
-         <Space space={4} margin />
+         <Space space={2} margin />
          <ContentContainer>
             <ArticleListPanel />
          </ContentContainer>

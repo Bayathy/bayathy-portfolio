@@ -1,5 +1,6 @@
 export type BlogpostMatter = {
    title: string
+   date: string
    content: string
 }
 
