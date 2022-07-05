@@ -2,7 +2,6 @@ import { GetStaticProps, NextPage } from 'next'
 import { usePageState } from '../context/PageContextProvider/pageContext'
 import { useEffect } from 'react'
 import { BlogLayout } from '../component/template'
-import { BlogPost } from '../type/Blogpost'
 import { getSortedPostsData } from '../lib/blogpost'
 
 const Blog: NextPage = () => {
@@ -14,7 +13,7 @@ const Blog: NextPage = () => {
    return <BlogLayout />
 }
 
-export const getStaticProps: GetStaticProps<BlogPost[]> = () => {
+export const getStaticProps: GetStaticProps = async () => {
    const data = getSortedPostsData()
    return {
       props: {

@@ -3,7 +3,10 @@ import { Card } from '../../atom'
 import { css, useTheme } from '@emotion/react'
 import Link from 'next/link'
 
-export const ArticleListPanel: React.FC = () => {
+export const ArticleListPanel: React.FC<{ title: string; date: string }> = ({
+   title,
+   date
+}) => {
    const theme = useTheme()
    return (
       <Card
@@ -32,11 +35,11 @@ export const ArticleListPanel: React.FC = () => {
                      }
                   `}
                >
-                  Article Title
+                  {title}
                </a>
             </Link>
             <div>
-               <p>date</p>
+               <p>{date}</p>
             </div>
          </div>
       </Card>
