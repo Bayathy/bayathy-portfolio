@@ -33,6 +33,13 @@ export function getSortedPostsData() {
    const AllPostData = files.map((index) => {
       const fileName = index.replace(/\.md/, '')
       const fullPath = path.join(postdir, `${index}.md`)
+
+      const matterResult = matter(fullPath)
+      return { ...(matterResult.data as { title: string; date: string }) }
+   })
+
+   return AllPostData.sort((a, b) => {
+      return a.date < b.date ? 1 : -1
    })
 }
 
