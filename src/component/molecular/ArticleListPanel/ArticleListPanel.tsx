@@ -36,7 +36,13 @@ export const ArticleListPanel: React.FC = () => {
                </a>
             </Link>
             <div>
-               <p>date</p>
+               <p
+                  css={css`
+                     text-align: right;
+                  `}
+               >
+                  date
+               </p>
             </div>
          </div>
       </Card>
