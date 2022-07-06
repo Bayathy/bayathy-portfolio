@@ -5,6 +5,7 @@ import React from 'react'
 import { WorksPanel } from '../../molecular'
 import { WorkProperty } from '../../../pages/Work'
 import { css, useTheme } from '@emotion/react'
+import { popup } from '../../../style/animation'
 
 export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
    const theme = useTheme()
@@ -12,7 +13,11 @@ export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
       <BaseLayout>
          <TopContents />
          <Space space={2} margin />
-         <ContentContainer>
+         <ContentContainer
+            style={css`
+               animation: ${popup} 0.5s ease;
+            `}
+         >
             <div
                css={css`
                   display: flex;
