@@ -3,10 +3,11 @@ import { Card } from '../../atom'
 import { css, useTheme } from '@emotion/react'
 import Link from 'next/link'
 
-export const ArticleListPanel: React.FC<{ title: string; date: string }> = ({
-   title,
-   date
-}) => {
+export const ArticleListPanel: React.FC<{
+   id: string
+   title: string
+   date: string
+}> = ({ id, title, date }) => {
    const theme = useTheme()
    return (
       <Card
@@ -20,7 +21,7 @@ export const ArticleListPanel: React.FC<{ title: string; date: string }> = ({
                padding: ${theme.padding.small};
             `}
          >
-            <Link href={`posts/${title}`} passHref>
+            <Link href={`posts/${id}`} passHref>
                <a
                   css={css`
                      color: ${theme.colors.text};

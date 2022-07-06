@@ -23,6 +23,7 @@ export const BlogLayout: React.FC<PostList> = ({ data }) => {
                      <ArticleListPanel
                         title={index.title}
                         date={index.date}
+                        id={index.id}
                         key={key}
                      />
                   )

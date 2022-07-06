@@ -5,7 +5,7 @@ import { BlogLayout } from '../component/template'
 import { getSortedPostsData } from '../lib/blogpost'
 
 export type PostList = {
-   data: { title: string; date: string }[]
+   data: { id: string; title: string; date: string }[]
 }
 
 // eslint-disable-next-line react/prop-types
