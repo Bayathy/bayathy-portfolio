@@ -5,7 +5,7 @@ import { BaseLayout } from '../BaseLayout'
 import { ArticleListPanel } from '../../molecular'
 import { PostList } from '../../../pages/Blog'
 import { css } from '@emotion/react'
-import { popup } from '../../../style/animation'
+import { popUp } from '../../../style/animation'
 
 export const BlogLayout: React.FC<PostList> = ({ data }) => {
    return (
@@ -14,7 +14,7 @@ export const BlogLayout: React.FC<PostList> = ({ data }) => {
          <Space space={2} margin />
          <ContentContainer
             style={css`
-               animation: ${popup} 0.5s ease;
+               animation: ${popUp} 0.5s ease;
             `}
          >
             <>
