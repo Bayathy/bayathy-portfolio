@@ -17,7 +17,6 @@ export const BlogLayout: React.FC<PostList> = ({ data }) => {
                animation: ${popUp} 0.5s ease;
             `}
          >
-            s
             <>
                {data?.map((index, key) => {
                   return (
