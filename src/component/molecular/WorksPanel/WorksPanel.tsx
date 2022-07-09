@@ -5,36 +5,36 @@ import Link from 'next/link'
 
 type WorksPanel = {
    title: string
-   ImageSrc: string
+   content: string
 }
 
-export const WorksPanel: React.FC<WorksPanel> = ({ title, ImageSrc }) => {
+export const WorksPanel: React.FC<WorksPanel> = ({ title }) => {
    const theme = useTheme()
 
    return (
       <Card
          className={'Card'}
          style={css`
-            width: 80%;
+           width: 80%;
          `}
       >
          <div
             css={css`
-               background: ${theme.colors.extra};
-               border-radius: inherit;
-               padding: ${theme.padding.small};
+              background: ${theme.colors.extra};
+              border-radius: inherit;
+              padding: ${theme.padding.small};
             `}
          >
             <div>
                <Link href={`works/${title}`}>
                   <a
                      css={css`
-                        text-align: left;
-                        font-size: 1.4rem;
+                       text-align: left;
+                       font-size: 1.4rem;
 
-                        :hover {
-                           text-decoration: underline;
-                        }
+                       :hover {
+                         text-decoration: underline;
+                       }
                      `}
                   >
                      {title}
@@ -44,14 +44,13 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title, ImageSrc }) => {
             <div>
                <p
                   css={css`
-                     width: inherit;
-                     text-overflow: ellipsis;
-                     white-space: nowrap;
-                     overflow: hidden;
+                    width: inherit;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                   `}
                >
-                  content content content content content content content
-                  content content content content
+
                </p>
             </div>
          </div>

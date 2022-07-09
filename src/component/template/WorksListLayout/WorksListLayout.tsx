@@ -30,7 +30,7 @@ export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
                   return (
                      <WorksPanel
                         title={index.title}
-                        ImageSrc={index.ImageURL}
+                        content={index.content}
                         key={key}
                      />
                   )

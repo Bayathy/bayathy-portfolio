@@ -43,11 +43,27 @@ export async function getAllWorkPostId() {
 
 export async function getAllWorksProperty() {
    const fileNames = fs.readdirSync(postdir)
-   const AllFileProperty = fileNames.map((index) => {
-      const fileContents = fs.readFileSync(path.resolve(postdir, index), 'utf8')
-      const matterResult = matter(fileContents)
-      return matterResult.data as { title: string; ImageURL: string }
-   })
+   const AllFileProperty = await Promise.all(
+      fileNames.map(async (index) => {
+         const fileContents = fs.readFileSync(
+            path.resolve(postdir, index),
+            'utf8'
+         )
+         const processedContent = await unified()
+            .use(remarkParse)
+            .use(remarkRehype)
+            .use(rehypeStringify)
+         const matterResult = matter(fileContents)
+         const contentHtml = await processedContent
+            .process(matterResult.content)
+            .then((data) => data.toString())
+
+         const content = contentHtml.replace(/<p>|<\/p>/g, '')
+
+         const result = { content, ...(matterResult.data as { title: string }) }
+         return result
+      })
+   )
 
    return AllFileProperty
 }

@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import { usePageState } from '../context/PageContextProvider/pageContext'
 
 export type WorkProperty = {
-   data: { title: string; ImageURL: string }[]
+   data: { title: string; content: string }[]
 }
 
 // eslint-disable-next-line react/prop-types
@@ -19,7 +19,7 @@ const Work: NextPage<WorkProperty> = ({ data }) => {
 }
 
 export const getStaticProps: GetStaticProps<WorkProperty> = async () => {
-   const data = await getAllWorksProperty().then((data) => data)
+   const data = await getAllWorksProperty()
    return {
       props: {
          data
