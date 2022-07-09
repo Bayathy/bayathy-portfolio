@@ -10,7 +10,7 @@ import { popUp } from '../../../style/animation'
 export const WorksListLayout: React.FC<WorkProperty> = ({ data }) => {
    const theme = useTheme()
    return (
-      <BaseLayout title={'Works'}>
+      <BaseLayout title={'Work'}>
          <TopContents />
          <Space space={2} margin />
          <ContentContainer

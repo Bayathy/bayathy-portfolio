@@ -17,6 +17,7 @@ export const SEO: React.FC<SEOProperty> = ({
    return (
       <Head>
          <title>{`Bayathy/${title}`}</title>
+         <meta name="viewport" content="initial-scale=1" />
          <meta property="og:title" content={title} />
          <meta property="og:description" content={description} />
          <meta property="og:type" content="blog" />
@@ -24,7 +25,7 @@ export const SEO: React.FC<SEOProperty> = ({
          <meta property="og:image" content={image} />
          <meta property="og:site_name" content={title} />
          <meta name="twitter:card" content="summary" />
-         <meta name="twitter:site" content="@tcr_jp" />
+         <meta name="twitter:site" content="@Bayathy" />
          <meta name="twitter:url" content={image} />
          <meta name="twitter:title" content={title} />
          <meta name="twitter:description" content={description} />
