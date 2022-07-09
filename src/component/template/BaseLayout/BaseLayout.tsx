@@ -1,20 +1,21 @@
 import React from 'react'
 import { Space } from '../../atom'
-import { Footer, Header } from '../../organism'
+import { Footer, Header, SEO, SEOProperty } from '../../organism'
 import { css } from '@emotion/react'
 import { GlobalStyle } from '../../../style/global'
 
 type BaseLayout = {
    children: React.ReactNode
-}
+} & SEOProperty
 
-export const BaseLayout: React.FC<BaseLayout> = ({ children }) => {
+export const BaseLayout: React.FC<BaseLayout> = ({ children, ...rest }) => {
    return (
       <div
          css={css`
             margin: auto;
          `}
       >
+         <SEO {...rest} />
          <GlobalStyle />
          <div
             css={css`

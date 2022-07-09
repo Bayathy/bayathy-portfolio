@@ -4,7 +4,7 @@ import { BaseLayout } from '../BaseLayout'
 
 export const MainLayout: React.FC = () => {
    return (
-      <BaseLayout>
+      <BaseLayout title={'Blog'}>
          <TopContents />
          <About />
       </BaseLayout>

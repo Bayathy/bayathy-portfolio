@@ -1,27 +1,24 @@
 import React from 'react'
 import Head from 'next/head'
 
-type SEO = {
-   title: string
-   description: string
-   keyword: string
-   image: string
-   url: string
+export type SEOProperty = {
+   title?: string
+   description?: string
+   image?: string
+   url?: string
 }
 
-export const SEO: React.FC<SEO> = ({
+export const SEO: React.FC<SEOProperty> = ({
    title,
    description,
-   keyword,
    image,
    url
 }) => {
    return (
       <Head>
-         <title>{title}</title>
+         <title>{`Bayathy/${title}`}</title>
          <meta property="og:title" content={title} />
          <meta property="og:description" content={description} />
-         <meta name="keywords" content={keyword} />
          <meta property="og:type" content="blog" />
          <meta property="og:url" content={url} />
          <meta property="og:image" content={image} />
@@ -33,8 +30,8 @@ export const SEO: React.FC<SEO> = ({
          <meta name="twitter:description" content={description} />
          <meta name="twitter:image" content={image} />
          <link rel="canonical" href={url} />
-         <link rel="shortcut icon" href={'https://t-cr.jp/favicon.ico'} />
-         <link rel="apple-touch-icon" href={'https://t-cr.jp/logo.png'} />
+         <link rel="shortcut icon" href={'/magcup.ico'} />
+         <link rel="apple-touch-icon" href={'/magcup.ico'} />
       </Head>
    )
 }

@@ -9,7 +9,7 @@ import { popUp } from '../../../style/animation'
 
 export const BlogLayout: React.FC<PostList> = ({ data }) => {
    return (
-      <BaseLayout>
+      <BaseLayout title={'Blog'}>
          <TopContents />
          <Space space={2} margin />
          <ContentContainer
