@@ -22,7 +22,9 @@ export const About: React.FC = () => {
             <Space space={2} margin />
             <HistoryBar datalist={datalist} />
             <Space space={2} margin />
-            <SkillsCard />
+            <SkillsCard>
+               <p>adfadf</p>
+            </SkillsCard>
          </div>
       </>
    )
