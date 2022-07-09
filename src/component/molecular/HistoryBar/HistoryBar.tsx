@@ -2,23 +2,13 @@ import { css, useTheme } from '@emotion/react'
 import React from 'react'
 import { ContentContainer, HistoryPlate } from '../../atom'
 
-type History = {
+export type History = {
    date: string
    text: string
 }
 
-export const HistoryBar: React.FC = () => {
+export const HistoryBar: React.FC<{ datalist: History[] }> = ({ datalist }) => {
    const theme = useTheme()
-
-   const datelist: History[] = [
-      { date: '1/1', text: 'aaa' },
-      { date: '1/1', text: 'aaa' },
-      {
-         date: '1/1',
-         text: 'aaaaaa'
-      },
-      { date: '1/1', text: 'aaa' }
-   ]
 
    return (
       <ContentContainer
@@ -43,7 +33,7 @@ export const HistoryBar: React.FC = () => {
                }
             `}
          >
-            {datelist.map((index, key) => (
+            {datalist.map((index, key) => (
                <div
                   className={'plate'}
                   css={css`
