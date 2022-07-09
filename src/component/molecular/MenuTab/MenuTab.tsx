@@ -33,7 +33,7 @@ export const MenuTab: React.FC = () => {
                }}
             />
             <Tabitembox
-               name={'Works'}
+               name={'Work'}
                isSlect={page[1]}
                onClick={() => {
                   router.push('./Work')
