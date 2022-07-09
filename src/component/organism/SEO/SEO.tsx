@@ -33,17 +33,17 @@ export const SEO: React.FC<SEOProperty> = ({
          <meta property="og:site_name" content={title} />
          <meta name="twitter:card" content="summary_large_image" />
          <meta name="twitter:site" content="@Bayathy" />
+         <meta name="twitter:url" content={url} />
+         <meta name="twitter:title" content={title} />
+         <meta name="twitter:description" content={description} />
          <meta
-            name="twitter:url"
+            name="twitter:image"
             content={
                image
                   ? image
                   : 'https://res.cloudinary.com/dff7r0iah/image/upload/v1657348630/ogp-default_fhypwx.png'
             }
          />
-         <meta name="twitter:title" content={title} />
-         <meta name="twitter:description" content={description} />
-         <meta name="twitter:image" content={image} />
          <link rel="canonical" href={url} />
          <link rel="shortcut icon" href={'/magcup.ico'} />
          <link rel="apple-touch-icon" href={'/magcup.ico'} />
