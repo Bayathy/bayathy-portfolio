@@ -11,7 +11,7 @@ export const popUp = keyframes`
   }
 
   75% {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   to {
