@@ -13,7 +13,7 @@ export const ArticleLayout: React.FC<BlogPost> = ({ data }) => {
       <BaseLayout
          title={data.title}
          description={data.content}
-         image={`https://res.cloudinary.com/dff7r0iah/image/upload/l_text:Sawarabi%20Gothic_50_bold:テストを書く,co_rgb:333,w_500,c_fit/v1657348914/OGB-blog_nvuwol.png`}
+         image={`https://res.cloudinary.com/dff7r0iah/image/upload/l_text:Sawarabi%20Gothic_50_bold:${data.title},co_rgb:333,w_500,c_fit/v1657348914/OGB-blog_nvuwol.png`}
       >
          <ContentContainer>
             <p
