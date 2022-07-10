@@ -34,13 +34,30 @@ export const ArticleLayout: React.FC<BlogPost> = ({ data }) => {
             <Space space={1} margin />
             <div
                css={css`
-                  width: 90%;
+                  padding: 0rem 3rem;
+                  @media (max-width: 480px) {
+                     padding: 0rem 2rem;
+                  }
                   margin: auto;
 
+                  ul {
+                     padding-left: 1rem;
+                  }
+
                   h1 {
+                     line-height: 1.2;
                      font-size: 1.8rem;
                      @media (max-width: 480px) {
                         font-size: 1.3rem;
+                     }
+                     border-bottom: dotted;
+                  }
+
+                  h2 {
+                     line-height: 2;
+                     font-size: 1.5rem;
+                     @media (max-width: 480px) {
+                        font-size: 1.1rem;
                      }
                   }
 
