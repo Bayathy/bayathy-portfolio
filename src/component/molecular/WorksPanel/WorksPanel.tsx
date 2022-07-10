@@ -61,20 +61,22 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title, content }) => {
                   padding-right: 0.5rem;
                `}
             >
-               <a
-                  css={css`
-                     border: 2px solid ${theme.colors.text};
-                     padding: 0.2rem 0.5rem;
-                     border-radius: 10px;
+               <Link href={`works/${title}`} passHref>
+                  <a
+                     css={css`
+                        border: 2px solid ${theme.colors.text};
+                        padding: 0.2rem 0.5rem;
+                        border-radius: 10px;
 
-                     :hover {
-                        border: 2px solid ${theme.colors.secondary};
-                        color: ${theme.colors.secondary};
-                     }
-                  `}
-               >
-                  more
-               </a>
+                        :hover {
+                           border: 2px solid ${theme.colors.secondary};
+                           color: ${theme.colors.secondary};
+                        }
+                     `}
+                  >
+                     more
+                  </a>
+               </Link>
             </div>
          </div>
       </Card>
