@@ -17,8 +17,8 @@ export function GlobalStyle() {
             * {
                margin: 0;
                padding: 0;
-               font-family: 'Anek Malayalam', 'Yu Gothic', '游ゴシック',
-                  YuGothic, '游ゴシック体', sans-serif;
+               font-family: 'Anek Malayalam';
+               font-family: 'Sawarabi Gothic', sans-serif;
                user-select: none;
             }
 
