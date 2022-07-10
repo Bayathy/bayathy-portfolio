@@ -17,9 +17,8 @@ export function GlobalStyle() {
             * {
                margin: 0;
                padding: 0;
-               font-family: 'Anek Malayalam';
-               font-family: 'Sawarabi Gothic', sans-serif;
                user-select: none;
+               font-family: 'Mingzat', 'Kosugi Maru', sans-serif;
             }
 
             ::-webkit-scrollbar {
