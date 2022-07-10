@@ -27,11 +27,9 @@ export const ArticleListPanel: React.FC<{
                      color: ${theme.colors.text};
                      text-decoration: none;
                      font-size: 1.2rem;
-                     text-overflow: ellipsis;
-                     white-space: nowrap;
-                     overflow: hidden;
+                     overflow-wrap: break-word;
 
-                     :hover {
+                     ::hover {
                         text-decoration: underline;
                      }
                   `}

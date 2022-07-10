@@ -67,6 +67,8 @@ export const WorksPanel: React.FC<WorksPanel> = ({ title, content }) => {
                         border: 2px solid ${theme.colors.text};
                         padding: 0.2rem 0.5rem;
                         border-radius: 10px;
+                        text-decoration: none;
+                        color: ${theme.colors.text};
 
                         :hover {
                            border: 2px solid ${theme.colors.secondary};
