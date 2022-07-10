@@ -7,7 +7,7 @@ import { WorkPost } from '../../../type/Workpost'
 
 export const WorkLayout: React.FC<WorkPost> = ({ data }) => {
    return (
-      <BaseLayout title={data.title}>
+      <BaseLayout title={data.title} image={data.ImageURL}>
          <Header />
          <Space space={7.5} margin />
          <WorkDeteal data={data} />

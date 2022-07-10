@@ -20,7 +20,7 @@ export const SEO: React.FC<SEOProperty> = ({
          <meta name="viewport" content="initial-scale=1" />
          <meta property="og:title" content={title} />
          <meta property="og:description" content={description} />
-         <meta property="og:type" content="blog" />
+         <meta property="og:type" content="website" />
          <meta property="og:url" content={url} />
          <meta
             property="og:image"
