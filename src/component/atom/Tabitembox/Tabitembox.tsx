@@ -17,7 +17,8 @@ const Tabitembox: React.FC<Tabitem> = ({ name, isSlect, onClick }) => {
               color: ${theme.colors.text};
            `
          : css`
-              color: ${theme.colors.primary};
+              color: ${theme.colors.text};
+              opacity: 0.2;
            `
 
    return (
@@ -30,6 +31,7 @@ const Tabitembox: React.FC<Tabitem> = ({ name, isSlect, onClick }) => {
             font-size: 1.2rem;
             padding-top: 10px;
             padding-bottom: 10px;
+            font-weight: bold;
             ${borderStyle}
          `}
          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
