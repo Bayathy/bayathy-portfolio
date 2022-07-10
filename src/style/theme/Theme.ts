@@ -11,9 +11,9 @@ const marginTheme = {
 }
 export const lightTheme = {
    colors: {
-      primary: '#f5f3f2',
-      secondary: '#e7be99',
-      extra: '#e3dfdc',
+      primary: '#ced7dc',
+      secondary: '#e6e5ef',
+      extra: '#ffffff',
       text: '#000000'
    },
    padding: paddingTheme,
