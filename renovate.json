@@ -7,10 +7,6 @@
   "schedule": [
     "every weekend"
   ],
-  "enabledManagers": [
-    "dockerfile",
-    "docker-compose"
-  ],
   "packageRules": [
     {
       "matchDepTypes": [
