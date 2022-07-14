@@ -3,6 +3,8 @@ import { Icon } from '@iconify/react'
 import { useTheme as useThemeMode } from '../../../context/ThemeContextProvider/themecontext'
 import { useTheme } from '@emotion/react'
 import { StyledButton } from '../../atom'
+import sunIcon from '@iconify/icons-tabler/sun'
+import moonIcon from '@iconify/icons-tabler/moon'
 
 export const ModeToggleButton: React.FC = () => {
    const { colorMode, setColorMode } = useThemeMode()
@@ -16,7 +18,7 @@ export const ModeToggleButton: React.FC = () => {
                paddingTop: '10%',
                color: `${theme.colors.text}`
             }}
-            icon={colorMode === 'darkTheme' ? 'tabler:sun' : 'tabler:moon'}
+            icon={colorMode === 'darkTheme' ? sunIcon : moonIcon}
             onClick={setColorMode}
          />
       </StyledButton>
