@@ -7,43 +7,46 @@ export const Header: React.FC = () => {
    const theme = useTheme()
 
    return (
-      <div
-         css={css`
-            position: fixed;
-            top: 0;
-            width: 100vw;
-            background: ${theme.colors.secondary};
-            height: 3.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 999;
-         `}
-      >
-         <ContentContainer>
-            <div
-               css={css`
-                  display: flex;
-                  justify-content: space-between;
-                  padding-left: 2rem;
-               `}
-            >
+      <header>
+         {' '}
+         <div
+            css={css`
+               position: fixed;
+               top: 0;
+               width: 100vw;
+               background: ${theme.colors.secondary};
+               height: 3.5rem;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               z-index: 999;
+            `}
+         >
+            <ContentContainer>
                <div
                   css={css`
-                     font-size: 1.3rem;
+                     display: flex;
+                     justify-content: space-between;
+                     padding-left: 2rem;
                   `}
                >
-                  <p>Bayathy</p>
+                  <div
+                     css={css`
+                        font-size: 1.3rem;
+                     `}
+                  >
+                     <p>Bayathy</p>
+                  </div>
+                  <div
+                     css={css`
+                        padding-right: 1.5rem;
+                     `}
+                  >
+                     <HeaderButtons />
+                  </div>
                </div>
-               <div
-                  css={css`
-                     padding-right: 1.5rem;
-                  `}
-               >
-                  <HeaderButtons />
-               </div>
-            </div>
-         </ContentContainer>
-      </div>
+            </ContentContainer>
+         </div>
+      </header>
    )
 }
