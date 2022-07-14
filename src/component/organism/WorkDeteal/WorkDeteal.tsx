@@ -1,13 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import { css, useTheme } from '@emotion/react'
+import { css } from '@emotion/react'
 import { ContentContainer, Space, TitleTypography } from '../../atom'
 import { WorkdetealCard } from '../../molecular'
 import { WorkPost } from '../../../type/Workpost'
 
 export const WorkDeteal: React.FC<WorkPost> = ({ data }) => {
-   const theme = useTheme()
-
    return (
       <>
          <ContentContainer>
@@ -21,10 +19,12 @@ export const WorkDeteal: React.FC<WorkPost> = ({ data }) => {
             >
                <Image
                   style={{ borderRadius: '10px' }}
-                  src={data.ImageURL! ? data.ImageURL : '/dummy.jpg'}
+                  src={data.ImageURL!}
                   layout={'fill'}
                   objectFit={'cover'}
                   alt={data.title}
+                  placeholder="blur"
+                  blurDataURL={data.ImageURL}
                />
             </div>
             <Space space={3} margin />
